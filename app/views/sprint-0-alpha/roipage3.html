@@ -198,17 +198,7 @@
    
 
 <style>
-    .das-search-form__group {
-    display: table;
-    width: 100%;
-}
-    .das-search-form__button-wrap{display:table-cell;vertical-align:top;width:1%}
-   
-
-    .das-search-form__button{overflow:hidden;text-indent:-9999px;background-color:#1d70b8;background-image:url(/app/assets/images/icon-search--white.svg);background-position:center;background-repeat:no-repeat;background-size:50%;box-shadow:none;width:40px;height:40px;margin:0}
-
-
-    .das-search-form__button:hover,.das-search-form__button:active,.das-search-form__button[disabled="disabled"]:hover,.das-search-form__button[disabled]:hover{background-color:#16558c}.das-search-form__button:focus,.das-search-form__button:focus:not(:active):not(:hover){box-shadow:none;background-color:#fd0;background-image:url("../images/icon-search--black.svg")}.das-search-form__button:active{top:0}.das-search-form--m .das-search-form__input{height:50px;line-height:50px;padding-left:10px}.das-search-form--m .das-search-form__button{width:50px;height:50px}.das-search-form--l .das-search-form__input{height:60px;line-height:60px;padding-left:15px}.das-search-form--l .das-search-form__button{width:60px;height:60px}
+ 
 
 .govuk-link {
 
@@ -241,16 +231,14 @@ font-family: "nobel",sans-serif;
 .govuk-link:link, .das-table__sort:link, .das-button--inline-link:link {
     color: #1d70b8;
 }
-a, a:visited, a:hover, a:active {
-    color: #1d70b8;
-}
-.govuk-link:hover, a:hover, .app-step-nav-header__title:hover, .app-step-nav-related__link:hover {
+
+.govuk-link:hover, .app-step-nav-header__title:hover, .app-step-nav-related__link:hover {
     color: #003078;
 }
-.govuk-link:link, a:link, .app-step-nav-header__title:link, .app-step-nav-related__link:link {
+.govuk-link:link, .app-step-nav-header__title:link, .app-step-nav-related__link:link {
     color: #1d70b8;
 }
-.govuk-link:hover, a:hover, .app-step-nav-header__title:hover, .app-step-nav-related__link:hover {
+.govuk-link:hover, .app-step-nav-header__title:hover, .app-step-nav-related__link:hover {
     text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
     -webkit-text-decoration-skip-ink: none;
     text-decoration-skip-ink: none;
@@ -269,7 +257,6 @@ font-style: normal;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 
-padding: 20px 20px;
 margin-bottom: 20px;
 height: 100%;
 display: block;
@@ -291,12 +278,10 @@ position: relative;">
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
                     <div class="govuk-form-group">
-                        <label for="searchTerm" class="govuk-label">Search for a course</label>
+                        <label for="searchTerm" class="govuk-label">Enter a job role or keywords</label>
                         <div class="das-search-form__group">
-                            <input class="govuk-input das-search-form__input" id="searchTerm" name="searchTerm" type="text" placeholder="Start typing to search apprenticeships">
-                            <div class="das-search-form__button-wrap">
-                                <button class="govuk-button das-search-form__button" type="submit">
-                            </div>
+                            <input class="govuk-input das-search-form__input" id="searchTerm" name="searchTerm" type="text" >
+                            
                         </div>
                     </div>
                 </div>
@@ -305,7 +290,7 @@ position: relative;">
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third">
                     <div class="govuk-form-group">
-                        <label class="govuk-label" for="selectedEmployer" style=" font-family: nobel,sans-serif; white-space: nowrap; " >Apprenticeship category</label>
+                        <label class="govuk-label" for="selectedEmployer" style=" font-family: nobel,sans-serif; white-space: nowrap;" >Apprenticeship category</label>
                         <select class="govuk-select govuk-!-width-full" id="selectedEmployer" name="selectedEmployer">
                             <option label="All" aria-label="All employers" value="" style=" font-family: nobel,sans-serif;">All</option>
                                     <option label="ALL TRADES TRAINING LIMITED" value="ALL TRADES TRAINING LIMITED">ALL TRADES TRAINING LIMITED</option>
@@ -358,7 +343,7 @@ position: relative;">
                 
                 
                 <th scope="col" class="govuk-table__header">
-                    <a class="das-table__sort" title="Sort the table by name" href="#">
+                    <a class="das-table__sort" title="Sort the table by name" href="#" style="color:#1d70b8">
                       Apprenticeship training course
                     </a>
                 </th>
@@ -583,7 +568,7 @@ position: relative;">
     </ul>
 </nav>
 
-<br><br><div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="roipage4.html" >Save and continue</a>
+<br><br><div class="govuk-button-group">
 
 <a href="/employers/sign-up" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
 </div>
