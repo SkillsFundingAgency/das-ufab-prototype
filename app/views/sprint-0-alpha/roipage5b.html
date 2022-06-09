@@ -15,108 +15,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<link rel="apple-touch-icon" href="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/apple-touch-icon.png?20220211.1">
-    <script>
-        window.onload = function(event) {
-            // Form validation - dataLayer pushes
-            var errorSummary = document.querySelector('.govuk-error-summary');
-            if (errorSummary !== null) {
-                var pageTitle = document.querySelector('h1.govuk-heading-xl').innerText;
-                var validationErrors = errorSummary.querySelectorAll('ul.govuk-error-summary__list li');
-                var numberOfErrors = validationErrors.length;
-                var validationMessage = 'Form validation';
-                var dataLayerObj;
-                if (numberOfErrors === 1) {
-                    validationMessage = validationErrors[0].innerText
-                }
-                dataLayerObj = {
-                    event: 'form submission error',
-                    page: pageTitle,
-                    message: validationMessage
-                }
-                window.dataLayer.push(dataLayerObj)
-            }
-            // Radio button selection - dataLayer pushes
-            var radioWrapper = document.querySelector('.govuk-radios');
-            if (radioWrapper !== null) {
-                var pageTitle = document.querySelector('h1.govuk-heading-xl').innerText;
-                var radios = radioWrapper.querySelectorAll('input[type=radio]');
-                var labelText;
-                var dataLayerObj;
-                nodeListForEach(radios, function(radio) {
-                    radio.addEventListener('change', function() {
-                        labelText = this.nextElementSibling.innerText;
-                        dataLayerObj = {
-                            event: 'radio button selected',
-                            page: pageTitle,
-                            radio: labelText
-                        }
-                        window.dataLayer.push(dataLayerObj)
-                    })
-                })
-            }
-        };
-        
-        function nodeListForEach(nodes, callback) {
-            if (window.NodeList.prototype.forEach) {
-                return nodes.forEach(callback)
-            }
-            for (var i = 0; i < nodes.length; i++) {
-                callback.call(window, nodes[i], i, nodes);
-            }
-        }</script>
+
        <link href="/stylesheets/main-29f1451e7da1d7e8d060b4deff9504dd.css" rel="stylesheet" media="all">
 <link rel="stylesheet" href="https://design-system.service.gov.uk/stylesheets/main-29f1451e7da1d7e8d060b4deff9504dd.css">
 	<link rel="stylesheet" href="https://use.typekit.net/xwy5uap.css">
 
-        <style>
     
-        
-        
-        .ncs-progress {
-       float: left;
-       width: 100%;
-       margin-bottom: 15px; }
-     
-     .ncs-progress__bar {
-       display: block;
-       height: 10px;
-       width: calc(100% - 80px);
-       float: right;
-       position: relative;
-       background-color: #bfc1c3;
-       border-radius: 5px;
-       overflow: hidden;
-       top: 8px; }
-       @media (min-width: 40.0625em) {
-         .ncs-progress__bar {
-           width: calc(100% - 100px);
-           top: 16px; } }
-       .ncs-progress__bar span {
-         background-color: #4d43a3;
-         height: 10px;
-         display: block;
-         width: 50%;
-         border-radius: 5px; }
-     
-     .ncs-progress__count {
-       color: #6f777b;
-       display: block;
-       width: 80px;
-       float: left;
-       text-align: left; }
-       @media (min-width: 40.0625em) {
-         .ncs-progress__count {
-           width: 100px; } }
-       .ncs-progress__count b {
-         color: #4d43a3;
-         margin-bottom: 4px;
-         display: block; }
-     
-     .ncs-progress--complete .ncs-progress__count {
-       color: #ffffff; }
-     
-     .ncs-progress--complete .ncs-progress__bar span {
-       background-color: #ffffff; }</style> 
 
 
 
@@ -216,7 +120,7 @@ div {
                         <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-1" href="#" class="fiu-navigation__link">Are they right for you?</a> </li>
                         <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-2" href="#" class="fiu-navigation__link">How do they work?</a> </li>
                         <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-3" href="#" class="fiu-navigation__link">Setting it up</a> </li>
-                        
+                       
 
             </ul>
         </nav>
@@ -273,57 +177,43 @@ div {
 
 
             
-                                    
-                                    <div class="govuk-form-group">
-                                        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                                           
-                                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                                              <span id="contact-hint" class="govuk-caption-l">
-                                                  Question 6 of 7
-                                              </span>
-                                              
-                                              <h2 style="margin-top: 0;">What hourly rate would you pay a non-apprentice for the same role?</h2>
-                                            </legend>
-                                          
-                                            <div class="govuk-radios" data-module="govuk-radios">
-                                              
-                                             
-                                              <div class="govuk-radios__item">
-                                                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-                                                <label class="govuk-label govuk-radios__label" for="contact-2">
-                                                 National Living Wage
-                                                </label>
-                                              </div>
-                                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                                                <div class="govuk-form-group">
-                                                  <label class="govuk-label" for="contact-by-phone">
-                                                    Phone number
-                                                  </label>
-                                                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
-                                                </div>
-                                        
-                                              </div>
-                                              <div class="govuk-radios__item">
-                                                <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
-                                                <label class="govuk-label govuk-radios__label" for="contact-3">
-                                                 Set wage yourself
-                                                </label>
-                                              </div>
-                                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-                                                <div class="govuk-form-group">
-                                                  <label class="govuk-label" for="contact-by-text">
-                                                    Mobile phone number
-                                                  </label>
-                                                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
-                                                </div>
-                                        
-                                              </div>
-                                            </div>
-                                        
-                                          </fieldset>
-                                      
-        <br><br>
-<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="roipage5b.html">Save and continue</a>
+
+    
+
+            
+    <span class="govuk-caption-l">Question 7 of 7</span>
+<h2>Select the % productivity you might expect of a new apprentice compared to a fully qualified apprentice in the same role</h2>
+<span class="govuk-caption-m" style="margin-top:0;">If this is unknown, we will assume 50%.</span><br>
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+       Why we ask this question
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+        We need to gather the productivity of a new apprentice so that we can accurately calculate how the apprentice will add value to your business over the duration of the apprenticeship and ongoing.<br><br>
+ 
+        The term Productivity refers to the proportion of the apprentices’ time that is spent providing the same value as that of a fully qualified apprentice in the same role.
+    </div>
+  </details>
+
+
+<div class="govuk-form-group">
+
+
+<label class="govuk-label" for="selectedCourse" >Productivity</label>
+<select class="govuk-select govuk-!-width-three-quarters" id="selectedCourse" name="selectedCourse" >
+<option label="50%" aria-label="All courses" value="" style="font-family: nobel,sans-serif;
+font-weight: 300;
+font-style: normal;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;">50%</option>
+
+
+</select>
+</div>
+<br><br>
+<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="roipage6.html">Save and continue</a>
 
 <a href="/employers/sign-up" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
 </div>

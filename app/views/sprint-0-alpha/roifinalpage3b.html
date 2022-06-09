@@ -233,8 +233,188 @@ position: relative;">
             
        
     
-            
-            
+            <style>
+
+
+.app-sub-navigation {
+    margin-bottom: 40px;
+    display: block;
+  }
+  
+  .app-sub-navigation__list {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (min-width: 23.4375em) {
+    .app-sub-navigation__list {
+      box-shadow: inset 0 -1px 0 #b1b4b6;
+      width: 100%;
+    }
+  }
+  
+  .app-sub-navigation__item {
+  
+    font-family: "nobel", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 600;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    box-shadow: inset 0 -1px 0 #b1b4b6;
+    display: block;
+    margin-top: -1px;
+  }
+  
+  @media print {
+    .app-sub-navigation__item {
+      font-family: sans-serif;
+    }
+  }
+  
+  @media (min-width: 40.0625em) {
+    .app-sub-navigation__item {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.31579;
+    }
+  }
+  
+  @media print {
+    .app-sub-navigation__item {
+      font-size: 14pt;
+      line-height: 1.15;
+    }
+  }
+  
+  .app-sub-navigation__item:last-child {
+    box-shadow: none;
+  }
+  
+  @media (min-width: 23.4375em) {
+    .app-sub-navigation__item {
+      box-shadow: none;
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 0;
+    }
+  }
+  
+  .app-sub-navigation__link {
+   
+    font-family: "nobel", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 17px;
+    padding-left: 15px;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+  }
+  
+  @media print {
+    .app-sub-navigation__link {
+      font-family: sans-serif;
+    }
+  }
+  
+  .app-sub-navigation__link:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #ffdd00;
+    box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+    text-decoration: none;
+  }
+  
+  .app-sub-navigation__link:link {
+    color: #1d70b8;
+  }
+  
+  .app-sub-navigation__link:visited {
+    color: #4c2c92;
+  }
+  
+  .app-sub-navigation__link:hover {
+    color: #003078;
+  }
+  
+  .app-sub-navigation__link:active {
+    color: #0b0c0c;
+  }
+  
+  .app-sub-navigation__link:focus {
+    color: #0b0c0c;
+  }
+  
+  @media (min-width: 23.4375em) {
+    .app-sub-navigation__link {
+      padding-left: 0;
+    }
+  }
+  
+  .app-sub-navigation__link:link, .app-sub-navigation__link:visited {
+    color: #1d70b8;
+  }
+  
+  .app-sub-navigation__link:hover {
+    color: #003078;
+  }
+  
+  .app-sub-navigation__link:focus {
+    color: #0b0c0c;
+    position: relative;
+    box-shadow: none;
+  }
+  
+  .app-sub-navigation__link:focus:before {
+    background-color: #0b0c0c;
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+  }
+  
+  .app-sub-navigation__link[aria-current="page"] {
+    color: #0b0c0c;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .app-sub-navigation__link[aria-current="page"]:before {
+    background-color: #4d43a3;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+  }
+  
+  @media (min-width: 23.4375em) {
+    .app-sub-navigation__link[aria-current="page"]:before {
+      height: 5px;
+      width: 100%;
+    }
+  }
+  
+  .app-sub-navigation__link[aria-current="page"]:focus:before {
+    background-color: #0b0c0c;
+  }
+  
+
+            </style>
+
     
     
   
@@ -248,7 +428,7 @@ position: relative;">
                        
                     </div>
 
-
+                  
 
                     <div class="govuk-grid-column-full" style="padding: 20px 20px; border: 1px solid #cbd0d3; margin-bottom: 5%;">
                         <div class="das-pane govuk-!-margin-bottom-3">
@@ -258,7 +438,7 @@ position: relative;">
                             <div class="govuk-grid-row">
                                 <div class="govuk-grid-column-one-third">
                                     <div class="govuk-form-group">
-                                        <label class="govuk-label" for="selectedEmployer" style=" font-family: nobel,sans-serif; " >Number of apprentices</label>
+                                        <label class="govuk-label" for="selectedEmployer" style=" font-family: nobel,sans-serif;">Number of apprentices</label>
                                         <select class="govuk-select govuk-!-width-full" id="selectedEmployer" name="selectedEmployer">
                                             <option label="1" aria-label="All employers" value="" style=" font-family: nobel,sans-serif;">All</option>
                                                     <option label="ALL TRADES TRAINING LIMITED" value="ALL TRADES TRAINING LIMITED">ALL TRADES TRAINING LIMITED</option>
@@ -341,23 +521,32 @@ position: relative;">
                         </div>
                         
                     </div>
+                    
+                    <nav class="app-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation">
 
-
+                        <ul class="app-sub-navigation__list">
+                      
+                      
+                            
+                      
+                              <li class="app-sub-navigation__item">
+                                <a class="app-sub-navigation__link" aria-current="page" href="roifinalpage3b.html" >Return summary</a>
+                              </li>
+                            
+                          
+                      
+                      
+                            
+                      
+                              <li class="app-sub-navigation__item">
+                                <a class="app-sub-navigation__link" href="roifinalpage3b.html" style="color:#1d70b8">Detailed return summary</a>
+                              </li>
+                            
+                          </ul>
+                      
+                      </nav>
                     <div class="govuk-panel govuk-panel--confirmation" style="background-color:#fff; padding: 0;">
-                        <details class="govuk-details" data-module="govuk-details" style="text-align: left; margin-left: 0;">
-                            <summary class="govuk-details__summary">
-                              <span class="govuk-details__summary-text">
-                                How we calculate your ROI
-                              </span>
-                            </summary>
-                            <div class="govuk-details__text" style="font-family: nobel,sans-serif;
-                            font-weight: 300;
-                            font-style: normal;
-                            -webkit-font-smoothing: antialiased;
-                            -moz-osx-font-smoothing: grayscale;">
-                              This is the formula we use to calculate your return on investment.
-                            </div>
-                          </details>
+                       
                         
                         <h3 class="govuk-heading-m" style="text-align:left; font-family: nobel,sans-serif; font-weight:500;">Based on  your input, after an <strong >initial cost of £10,300</strong> your return will be as follows:</h3> 
                        
@@ -427,6 +616,12 @@ position: relative;">
             <p class="fiu-panel__content">Over 8 million searches for apprenticeships on Find an Apprenticeship each month.</p>
             <a href="https://www.gov.uk/guidance/creating-an-apprenticeship-advert" id="fiu-panel-link-fat" class="fiu-button fiu-button--employers fiu-panel__button">Create your advert</a>
         </div>
+        <div class="fiu-panel fiu-panel--narrow-col">
+            <h2 class="govuk-heading-m fiu-panel__heading" style="color: black;"> How we calculate your ROI</h2>
+            <p class="govuk-body-m"> This is the formula we use to calculate your return on investment.</p>
+            <a href="/employers/sign-up" id="fiu-panel-link-reg-int-emp" class="fiu-button fiu-button--employers fiu-button--outlined fiu-panel__button">Learn more</a>
+        </div>
+                   
         
         <div class="fiu-panel fiu-panel--narrow-col">
             <h2 class="govuk-heading-m fiu-panel__heading" style="color: black;">From Nurse to Software Developer</h2>
@@ -434,12 +629,7 @@ position: relative;">
             <p class="govuk-body-m">Sarah went from nursing to programming in just 12 months.</p>
             <a href="/employers/sign-up" id="fiu-panel-link-reg-int-emp" class="fiu-button fiu-button--employers fiu-button--outlined fiu-panel__button">Sarah's story</a>
         </div>
-                    <div class="fiu-panel fiu-panel--narrow-col">
-            <h2 class="govuk-heading-m fiu-panel__heading" style="color: black;">Sign up to stay connected</h2>
-            <p class="govuk-body-m">Sign up for emails to keep you informed about apprenticeships</p>
-            <a href="/employers/sign-up" id="fiu-panel-link-reg-int-emp" class="fiu-button fiu-button--employers fiu-button--outlined fiu-panel__button">Register interest</a>
-        </div>
-                   
+           
         
                 </div>
     
