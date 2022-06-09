@@ -304,7 +304,6 @@ position: relative;">
   }
   
   .app-sub-navigation__link {
-      outline: none;
    
     font-family: "nobel", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -326,7 +325,7 @@ position: relative;">
   }
   
   .app-sub-navigation__link:focus {
-    outline:none;
+    outline: 3px solid transparent;
     color: #0b0c0c;
     background-color: #ffdd00;
     box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
@@ -416,7 +415,21 @@ position: relative;">
 
             </style>
 
+<style>
+
+    .dreapta {
+        text-align: right;
+        font-family: nobel,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+    .stanga {
+        font-family: nobel,sans-serif;
+    }
     
+    </style>
     
   
             
@@ -523,7 +536,7 @@ position: relative;">
                         
                     </div>
                     
-                    <nav class="app-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation" id="summary">
+                    <nav class="app-sub-navigation govuk-!-margin-bottom-4" aria-label="Sub navigation" id="detsummary">
 
                         <ul class="app-sub-navigation__list">
                       
@@ -531,7 +544,7 @@ position: relative;">
                             
                       
                               <li class="app-sub-navigation__item">
-                                <a class="app-sub-navigation__link" aria-current="page" href="roifinalpage3b#summary" >Summary</a>
+                                <a class="app-sub-navigation__link"  href="roifinalpage3b#summary" style="color:#1d70b8" >Summary</a>
                               </li>
                             
                           
@@ -540,30 +553,120 @@ position: relative;">
                             
                       
                               <li class="app-sub-navigation__item">
-                                <a class="app-sub-navigation__link" href="roifinalpage3c#detsummary" style="color:#1d70b8">Detailed summary</a>
+                                <a class="app-sub-navigation__link"  aria-current="page" href="roifinalpage3c#detsummary">Detailed summary</a>
                               </li>
                             
                           </ul>
                       
                       </nav>
-                    <div class="govuk-panel govuk-panel--confirmation" style="background-color:#fff; padding: 0;">
+                    <div class="govuk-panel govuk-panel--confirmation" style="background-color:#fff; padding: 0;"  >
                        
-                        
-                        <h3 class="govuk-heading-m" style="text-align:left; font-family: nobel,sans-serif; font-weight:500;">Based on  your input, after an <strong >initial cost of £10,300</strong> your return will be as follows:</h3> 
-                       
-                        <h3 class="govuk-heading-m" style="text-align:left;font-family: nobel,sans-serif; font-weight:500;"><strong>After the 3-years apprenticeship</strong> your return will be<strong> £25,750 or a 150% ROI.</strong> </h3> 
-                        <h3 class="govuk-heading-m" style="text-align:left;font-family: nobel,sans-serif; font-weight:500;"><strong>In the first year post-apprenticeship</strong> your return will be<strong> £28,840 or a 180% ROI.</strong> </h3> 
-                        <h3 class="govuk-heading-m" style="text-align:left;font-family: nobel,sans-serif; font-weight:500;"><strong>In the second year post-apprenticeship </strong> your return will be<strong> £30,900 or a 200% ROI.</strong> </h3> 
+                        <table class="govuk-table">
+   
+       
+              
+        
+                            <thead class="govuk-table__head" style="margin-top:60px; font-family: nobel,sans-serif;">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Breakdown</th>
+                               
+                                <th scope="col" class="govuk-table__header govuk-!-width-one-third dreapta" style="font-weight: 700;">Gain</th>
+                                <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-third">Cost</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">CoInvest</th>
+                              
+                                <td class="govuk-table__cell dreapta" >£5,700</td>
+                                <td class="govuk-table__cell dreapta">£300 (training)</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Productivity</th>
+                           
+                                <td class="govuk-table__cell dreapta">£83,280</td>
+                                <td class="govuk-table__cell dreapta">£18,759 (apprentice wage)</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">End of apprenticeship</th>
+                               
+                                <td class="govuk-table__cell dreapta">£88,980</td>
+                                <td class="govuk-table__cell dreapta">£19,059</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Year 1 Post-apprenticeship</th>
+                              
+                                <td class="govuk-table__cell dreapta">£58,874</td>
+                                <td class="govuk-table__cell dreapta">£20,202</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Year 2 Post-apprenticeship</th>
+                              
+                                <td class="govuk-table__cell dreapta">£62,145</td>
+                                <td class="govuk-table__cell dreapta">£20,202</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Year 3 Post-apprenticeship</th>
+                              
+                                <td class="govuk-table__cell dreapta">£65,416</td>
+                                <td class="govuk-table__cell dreapta">£20,202</td>
+                              </tr>
+                            </tbody>
+                          </table>
                        
                                   
 
 
-<br>
+<br><br>
+<table class="govuk-table">
+   
+       
+              
+        
+    <thead class="govuk-table__head" style="margin-top:60px; font-family: nobel,sans-serif;">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third"></th>
+       
+        <th scope="col" class="govuk-table__header govuk-!-width-one-third dreapta" style="font-weight: 700;">ROI %</th>
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-third">NET gain cumulative</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+  
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">End of apprenticeship</th>
+       
+        <td class="govuk-table__cell dreapta">367%</td>
+        <td class="govuk-table__cell dreapta">£69,921</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Year 1 Post-apprenticeship</th>
+      
+        <td class="govuk-table__cell dreapta">277%</td>
+        <td class="govuk-table__cell dreapta">£108,503</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Year 2 Post-apprenticeship</th>
+      
+        <td class="govuk-table__cell dreapta">253%</td>
+        <td class="govuk-table__cell dreapta">£105,536</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Year 3 Post-apprenticeship</th>
+      
+        <td class="govuk-table__cell dreapta">246%</td>
+        <td class="govuk-table__cell dreapta">£195,750</td>
+      </tr>
+    </tbody>
+  </table>
+
+
 <p class="govuk-body-m" style=" text-align: left;">All calculations are based on: 
     <ul class="govuk-list govuk-list--bullet"  style=" text-align: left; ">
         <li>full time, 37.5 hour per week contracts</li>
         <li>The wage for FTE has been adjusted by 80% to account for an apprentice who would spend 20% OTJ(off-the-job training)</li>
         <li>average industry wage provided by ONS(Office for National Statistics)</li>
+
         
        
     </ul>
