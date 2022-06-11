@@ -9,189 +9,86 @@
    
 
 	<meta charset="utf-8">
-	<title> Return on investment tool</title>
+	<title>Return on investment tool</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#0b0c0c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<link rel="apple-touch-icon" href="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/apple-touch-icon.png?20220211.1">
-    <script>
-        window.onload = function(event) {
-            // Form validation - dataLayer pushes
-            var errorSummary = document.querySelector('.govuk-error-summary');
-            if (errorSummary !== null) {
-                var pageTitle = document.querySelector('h1.govuk-heading-xl').innerText;
-                var validationErrors = errorSummary.querySelectorAll('ul.govuk-error-summary__list li');
-                var numberOfErrors = validationErrors.length;
-                var validationMessage = 'Form validation';
-                var dataLayerObj;
-                if (numberOfErrors === 1) {
-                    validationMessage = validationErrors[0].innerText
-                }
-                dataLayerObj = {
-                    event: 'form submission error',
-                    page: pageTitle,
-                    message: validationMessage
-                }
-                window.dataLayer.push(dataLayerObj)
-            }
-            // Radio button selection - dataLayer pushes
-            var radioWrapper = document.querySelector('.govuk-radios');
-            if (radioWrapper !== null) {
-                var pageTitle = document.querySelector('h1.govuk-heading-xl').innerText;
-                var radios = radioWrapper.querySelectorAll('input[type=radio]');
-                var labelText;
-                var dataLayerObj;
-                nodeListForEach(radios, function(radio) {
-                    radio.addEventListener('change', function() {
-                        labelText = this.nextElementSibling.innerText;
-                        dataLayerObj = {
-                            event: 'radio button selected',
-                            page: pageTitle,
-                            radio: labelText
-                        }
-                        window.dataLayer.push(dataLayerObj)
-                    })
-                })
-            }
-        };
-        
-        function nodeListForEach(nodes, callback) {
-            if (window.NodeList.prototype.forEach) {
-                return nodes.forEach(callback)
-            }
-            for (var i = 0; i < nodes.length; i++) {
-                callback.call(window, nodes[i], i, nodes);
-            }
-        }</script>
-
-	<link rel="stylesheet" href="https://use.typekit.net/xwy5uap.css">
-
-        <style>
     
-        
-        
-        .ncs-progress {
-       float: left;
-       width: 100%;
-       margin-bottom: 15px; }
+    <style>
      
-     .ncs-progress__bar {
-       display: block;
-       height: 10px;
-       width: calc(100% - 80px);
-       float: right;
+
+        @import url("https://p.typekit.net/p.css?s=1&k=xwy5uap&ht=tk&f=31225.31226.31227.31228.31229.31231&a=18525665&app=typekit&e=css");
+   
+   @font-face {
+   font-family:"nobel";
+   src:url("https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:200;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"nobel";
+   src:url("https://use.typekit.net/af/5e4a03/00000000000000003b9ae849/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff2"),url("https://use.typekit.net/af/5e4a03/00000000000000003b9ae849/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff"),url("https://use.typekit.net/af/5e4a03/00000000000000003b9ae849/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("opentype");
+   font-display:auto;font-style:italic;font-weight:200;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"nobel";
+   src:url("https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"nobel";
+   src:url("https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
+   font-display:auto;font-style:italic;font-weight:300;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"nobel";
+   src:url("https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"nobel";
+   src:url("https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+   }
+   
+   .tk-nobel { font-family: "nobel",sans-serif; }
+   
+   
+        .fiu-page-header {
+       font-family: nobel,sans-serif;
+       font-weight: 300;
+       font-style: normal;
+       -webkit-font-smoothing: antialiased;
+       -moz-osx-font-smoothing: grayscale;
+       background-color: #000;
+       padding: 1px 0;
+       color: #fff;
        position: relative;
-       background-color: #bfc1c3;
-       border-radius: 5px;
-       overflow: hidden;
-       top: 8px; }
-       @media (min-width: 40.0625em) {
-         .ncs-progress__bar {
-           width: calc(100% - 100px);
-           top: 16px; } }
-       .ncs-progress__bar span {
-         background-color: #fff;
-         height: 10px;
-         display: block;
-         width: 50%;
-         border-radius: 5px; }
-     
-     .ncs-progress__count {
-       color: #6f777b;
+   }
+   
+   
+   * {
+       box-sizing: border-box;
+   }
+   
+   div {
        display: block;
-       width: 80px;
-       float: left;
-       text-align: left; }
-       @media (min-width: 40.0625em) {
-         .ncs-progress__count {
-           width: 100px; } }
-       .ncs-progress__count b {
-         color: #4d43a3;
-         margin-bottom: 4px;
-         display: block; }
-     
-     .ncs-progress--complete .ncs-progress__count {
-       color: #ffffff; }
-     
-     .ncs-progress--complete .ncs-progress__bar span {
-       background-color: #ffffff; }</style> 
+   }
+   .govuk-template, .fiu-template {
+       background-color: #f3f2f1;
+       -webkit-text-size-adjust: 100%;
+       -ms-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+   }
 
-
-
-
-    
- <style>
-     
-
-     @import url("https://p.typekit.net/p.css?s=1&k=xwy5uap&ht=tk&f=31225.31226.31227.31228.31229.31231&a=18525665&app=typekit&e=css");
-
-@font-face {
-font-family:"nobel";
-src:url("https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:200;font-stretch:normal;
-}
-
-@font-face {
-font-family:"nobel";
-src:url("https://use.typekit.net/af/5e4a03/00000000000000003b9ae849/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff2"),url("https://use.typekit.net/af/5e4a03/00000000000000003b9ae849/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff"),url("https://use.typekit.net/af/5e4a03/00000000000000003b9ae849/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("opentype");
-font-display:auto;font-style:italic;font-weight:200;font-stretch:normal;
-}
-
-@font-face {
-font-family:"nobel";
-src:url("https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
-}
-
-@font-face {
-font-family:"nobel";
-src:url("https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
-font-display:auto;font-style:italic;font-weight:300;font-stretch:normal;
-}
-
-@font-face {
-font-family:"nobel";
-src:url("https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
-}
-
-@font-face {
-font-family:"nobel";
-src:url("https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
-}
-
-.tk-nobel { font-family: "nobel",sans-serif; }
-
-
-     .fiu-page-header {
-    font-family: nobel,sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #000;
-    padding: 1px 0;
-    color: #fff;
-    position: relative;
-}
-
-
-* {
-    box-sizing: border-box;
-}
-
-div {
-    display: block;
-}
-.govuk-template, .fiu-template {
-    background-color: #f3f2f1;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-}
-    .govuk-link{font-family:"GDS Transport",arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-decoration:underline;text-decoration-thickness:max(1px, .0625rem);text-underline-offset:.1em}
+   
+       .govuk-link{font-family:"nobel",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-decoration:underline;text-decoration-thickness:max(1px, .0625rem);text-underline-offset:.1em}
     
     
     
@@ -254,7 +151,7 @@ div {
                         <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-1" href="#" class="fiu-navigation__link">Are they right for you?</a> </li>
                         <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-2" href="#" class="fiu-navigation__link">How do they work?</a> </li>
                         <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-3" href="#" class="fiu-navigation__link">Setting it up</a> </li>
-                        <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-3" href="./roilanding.html" class="fiu-navigation__link">Return on investment tool</a> </li>
+                      
 
             </ul>
         </nav>
@@ -276,13 +173,13 @@ div {
                             <a href="/employers/" class="govuk-breadcrumbs__link">Employers</a>
                         </li>
                           
-                                <li class="govuk-breadcrumbs__list-item">Return on investment tool</li>
+                                <li class="govuk-breadcrumbs__list-item">Return on investment</li>
                 </ol>
             </div>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds fiu-page-header__wrap">
                         <strong class="fiu-tag fiu-tag--employers fiu-page-header__tag fiu-feature-text">Employers</strong>
-                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Return on investment tool</h1>
+                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Return on investment</h1>
                     <img class="fiu-page-header__hm-logo" src="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/hm-government-logo.svg" alt="HM Government logo">
                 </div>
             </div>
@@ -298,139 +195,126 @@ div {
         
    
 
-
           
-          
-<article class="fiu-article" style="font-family: nobel,sans-serif;
-font-weight: 300;
-font-style: normal;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-background: #fff;
-
-margin-bottom: 20px;
-height: 100%;
-display: block;
-color: #0b0c0c;
-text-decoration: none;
-border: 1px solid #cbd0d3;
-border-radius: 5px;
-position: relative;">
+<article class="fiu-article">
 
 
 
-            
-       <style>
-           .govuk-heading-m {
-               
-           }
 
+    <div class="govuk-grid-column-full" style="padding: 20px 20px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
+                                    <h1 class="govuk-heading-l">Check your answers</h1>
 
-           .dreapta {
-    text-align: right;
-    font-family: nobel,sans-serif;
-font-weight: 300;
-font-style: normal;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
-       </style>
-    
-            
-            
-    
-    
-  
-            
-            <div class="govuk-panel govuk-panel--confirmation" style="background-color:#fff;">
-               
-
-                <h1 class="govuk-panel__title" style="font-family: nobel,sans-serif; color:#4d43a3;">
-         Return on investment calculation complete
-                        </h1>
-
-                    
-                        <div class="govuk-panel govuk-panel--confirmation" style="background-color:#fff; padding: 0;">
+                                    <h2 class="govuk-heading-m">Your organisation details</h2>
                             
-                                             
-                            <h3 class="govuk-heading-m" style="text-align:left; font-family: nobel,sans-serif; font-weight:500; ">Based on  your input, during the 2-years apprenticeship your cost will be £27,290 made up of £250(training costs) and £27,040(wages).</h3> 
-                       
-                            <h3 class="govuk-heading-m" style="text-align:left;font-family: nobel,sans-serif; font-weight:500;"><strong style=" color:#4d43a3;">During the 2-years apprenticeship</strong> your return will be<strong style=" color:#4d43a3;"> £157,830 or a 470% ROI.</strong> </h3> 
+                                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                      <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Annual wage bill
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                           Over £3 million
+                                        </dd>
+                                        <dd class="govuk-summary-list__actions">
+                                          <a class="govuk-link--no-visited-state" href="page1">
+                                            Change<span class="govuk-visually-hidden"> name</span>
+                                          </a>
+                                        </dd>
+                                      </div>
+                                      <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                            Organisation size
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                         1 - 49 employees
+                                        </dd>
+                                        <dd class="govuk-summary-list__actions">
+                                          <a class="govuk-link--no-visited-state" href="page1b">
+                                            Change<span class="govuk-visually-hidden"> name</span>
+                                          </a>
+                                        </dd>
+                                      </div>
+                                      <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                          Industry
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                          Business and administration
+                                        </dd>
+                                        <dd class="govuk-summary-list__actions">
+                                          <a class="govuk-link--no-visited-state" href="page2">
+                                            Change<span class="govuk-visually-hidden"> date of birth</span>
+                                          </a>
+                                        </dd>
+                                      </div>
+                                     
+                                    </dl>
+                            
+                                    <h2 class="govuk-heading-m">Your potential hire details</h2>
+                            
+                                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                      <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                          Apprenticeship training course
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                            Business administrator (level 3)
+                                        </dd>
+                                        <dd class="govuk-summary-list__actions">
+                                          <a class="govuk-link--no-visited-state" href="page3">
+                                            Change<span class="govuk-visually-hidden"> previous application number</span>
+                                          </a>
+                                        </dd>
+                                      </div>
+                                      <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                         Apprentice hourly rate
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                        £9.50
+                                        </dd>
+                                        <dd class="govuk-summary-list__actions">
+                                          <a class="govuk-link--no-visited-state" href="page4">
+                                            Change<span class="govuk-visually-hidden"> home address</span>
+                                          </a>
+                                        </dd>
+                                      </div>
+                                      <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                         Non-apprentice hourly rate
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                        £11.50
+                                        </dd>
+                                        <dd class="govuk-summary-list__actions">
+                                          <a class="govuk-link--no-visited-state" href="page5">
+                                            Change<span class="govuk-visually-hidden"> home address</span>
+                                          </a>
+                                        </dd>
+                                      </div>
+                                      <div class="govuk-summary-list__row">
+                                        <dt class="govuk-summary-list__key">
+                                        Productivity
+                                        </dt>
+                                        <dd class="govuk-summary-list__value">
+                                      50%
+                                        </dd>
+                                        <dd class="govuk-summary-list__actions">
+                                          <a class="govuk-link--no-visited-state" href="page5b">
+                                            Change<span class="govuk-visually-hidden"> home address</span>
+                                          </a>
+                                        </dd>
+                                      </div>
+                                     
+                                    </dl>
+                            
+                                  
+        <br><br>
+<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="finalpage1b">Calculate ROI</a>
 
-
-
-
-                  <br>
-
-                  <h3 class="govuk-heading-m" style="text-align:left; font-family: nobel,sans-serif; font-weight:500; ">Based on  your input, after an initial cost of £27,290 made up of £250(training cost) and £27,040 wages your return will be as follows:</h3> 
-
-                            <h3 class="govuk-heading-m" style="text-align:left;font-family: nobel,sans-serif; font-weight:500;"><strong style=" color:#4d43a3;">First year post-apprenticeship</strong> your return will be<strong style=" color:#4d43a3;"> £28,840 or a 180% ROI.</strong> </h3> 
-                            <h3 class="govuk-heading-m" style="text-align:left;font-family: nobel,sans-serif; font-weight:500; "><strong style=" color:#4d43a3;">Second year post-apprenticeship </strong> your return will be<strong style=" color:#4d43a3;"> £30,900 or a 200% ROI.</strong> </h3> 
-                            <h3 class="govuk-heading-m" style="text-align:left;font-family: nobel,sans-serif; font-weight:500; "><strong style=" color:#4d43a3;">Third year post-apprenticeship </strong> your return will be<strong style=" color:#4d43a3;"> £30,900 or a 200% ROI.</strong> </h3>
-                                      
-    
-                <hr style="border-top:3px solid black"><br>
-               
-    
-
-
-              
-    
-
-
-          <p class="govuk-body-m" style=" text-align: left;">All calculations are based on: 
-            <ul class="govuk-list govuk-list--bullet"  style=" text-align: left;">
-                <li>full time, 37.5 hour per week contracts</li>
-                <li>average industry wage provided by ONS(Office for National Statistics)</li>
-                
-               
-            </ul>
-         </p>  
-               
-        
-        
-                    </div>
-                       
-
-
-                    <div class="govuk-button-group">
-                        <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/" class="fiu-button fiu-button--employers fiu-button--outlined fiu-panel__button" target="_blank">Save as PDF<span class="fiu-vh"> (Opens in a new window)</span></a>
-                      
-                        <a class="govuk-link" style="color: #4282ba; font-size: 19px;
-                        font-family: nobel,sans-serif;
-                        font-weight: 300;
-                        font-style: normal;
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                        text-decoration: underline;
-                        text-decoration-thickness: max(1px, 0.0625rem);
-                        text-underline-offset: 0.1em;" href="#">Start a new ROI calculation</a>
-                      </div>
-                    </div>
-
-
-
-         
-
-
-                 
-
-
-
-
-
-
-
-        
-
-
-
-           
-      
-
-      
+<a href="page5b" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
+</div>
+</div>
 </article>
-
 
 
 
@@ -442,12 +326,7 @@ font-style: normal;
 
     <div class="govuk-grid-column-one-third">
             
-        <div class="fiu-panel fiu-panel--fat fiu-panel--narrow-col">
-            <strong class="fiu-tag fiu-tag--employers fiu-feature-text fiu-panel__tag">Employers</strong>
-            <h2 class="govuk-heading-l fiu-panel__heading">Recruit an apprentice</h2>
-            <p class="fiu-panel__content">Over 8 million searches for apprenticeships on Find an Apprenticeship each month.</p>
-            <a href="https://www.gov.uk/guidance/creating-an-apprenticeship-advert" id="fiu-panel-link-fat" class="fiu-button fiu-button--employers fiu-panel__button">Create your advert</a>
-        </div>
+      
         
                     <div class="fiu-panel fiu-panel--narrow-col">
             <h2 class="govuk-heading-m fiu-panel__heading">Sign up to stay connected</h2>
@@ -469,7 +348,7 @@ font-style: normal;
 
 <hr class="fiu-section-break fiu-section-break--l">
 
-<h2 class="govuk-heading-m" style="color: black;">More on apprenticeships</h2>
+<h2 class="govuk-heading-m">More on apprenticeships</h2>
 <div class="govuk-grid-row fiu-flex-row">
     <div class="govuk-grid-column-one-half"><div class="fiu-card"><span class="fiu-card__category"><a class="fiu-card__category-link" href="/employers/hiring-an-apprentice">How we calculate the ROI of apprenticeships</a></span><h3 class="fiu-card__heading">How we calculate the ROI of apprenticeships</h3><p class="fiu-card__content">Here is a breakdown of how we calculate your return on investment.</p><a href="/employers/hiring-an-apprentice" class="fiu-card__link">Learn more <span class="fiu-vh"> about Hiring an apprentice </span></a></div></div><div class="govuk-grid-column-one-half"><div class="fiu-card"><span class="fiu-card__category"><a class="fiu-card__category-link" href="/employers/benefits-of-hiring-apprentice">What are the benefits of hiring an apprentice? </a></span><h3 class="fiu-card__heading">What are the benefits of hiring an apprentice? </h3><p class="fiu-card__content"></p><a href="/employers/benefits-of-hiring-apprentice" class="fiu-card__link">Learn more <span class="fiu-vh"> about What are the benefits of hiring an apprentice? </span></a></div></div>
 </div>
