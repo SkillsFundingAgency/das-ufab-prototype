@@ -163,13 +163,19 @@ div {
 <div class="govuk-grid-column-two-thirds">
         
    
-<style>
+    <style>
 
-
-
-    
-</style>
-
+        .capt {
+        
+            font-family: "nobel",sans-serif;
+                        font-weight: 300;
+                        font-style: normal;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+        }
+        
+            
+        </style> 
     
           
 <article class="fiu-article">
@@ -179,10 +185,11 @@ div {
             
 
     
-
+     
+    <div class="govuk-grid-column-full" style="padding: 20px 20px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
             
     <span class="govuk-caption-l">Question 7 of 7</span>
-<h2 style="margin-bottom:0;">In the first year of the apprenticeship how much of the job can an apprentice complete without supervision?</h2>
+    <h2 class="govuk-heading-l">In the first year of the apprenticeship how much of the job can an apprentice complete without supervision?</h2>
 <span class="govuk-caption-m" style="margin-top:0;">If this is unknown, we will assume 50%.</span><br>
   <details class="govuk-details" data-module="govuk-details">
     <summary class="govuk-details__summary">
@@ -190,7 +197,7 @@ div {
        Why we ask this question
       </span>
     </summary>
-    <div class="govuk-details__text">
+    <div class="govuk-details__text capt">
         We need to gather the productivity of a new apprentice so that we can accurately calculate how the apprentice will add value to your business over the duration of the apprenticeship and ongoing.<br><br>
  
         The term Productivity refers to the proportion of the apprentices’ time that is spent providing the same value as that of a fully qualified apprentice in the same role.
@@ -203,26 +210,10 @@ div {
 
 <label class="govuk-label" for="selectedCourse" >Productivity</label>
 <select class="govuk-select govuk-!-width-one-third" id="selectedCourse" name="selectedCourse" >
-<option label="50%" aria-label="All courses" value="" style="font-family: nobel,sans-serif;
-font-weight: 300;
-font-style: normal;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;">50%</option>
-<option label="60%" aria-label="All courses" value="" style="font-family: nobel,sans-serif;
-font-weight: 300;
-font-style: normal;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;">60%</option>
-<option label="70%" aria-label="All courses" value="" style="font-family: nobel,sans-serif;
-font-weight: 300;
-font-style: normal;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;">70%</option>
-<option label="80%" aria-label="All courses" value="" style="font-family: nobel,sans-serif;
-font-weight: 300;
-font-style: normal;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;">80%</option>
+<option label="50%" aria-label="All courses" value="">50%</option>
+<option label="60%" aria-label="All courses" value="">60%</option>
+<option label="70%" aria-label="All courses" value="">70%</option>
+<option label="80%" aria-label="All courses" value="">80%</option>
 
 
 
@@ -232,6 +223,7 @@ font-style: normal;
 <div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="roipage6.html">Continue</a>
 
 <a href="/employers/sign-up" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
+</div>
 </div>
 </article>
 
