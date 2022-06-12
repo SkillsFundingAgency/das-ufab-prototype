@@ -198,6 +198,7 @@ div {
     
                         
 <div class="govuk-grid-column-full" style="padding: 20px 20px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
+    <form action="page5b" method="post" class="form">
     <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -210,7 +211,7 @@ div {
                 
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                      <input class="govuk-radios__input" id="contact" name="nonappwages" type="radio" value="9.50" data-aria-controls="conditional-contact" {{ checked("nonappwages", "9.50") }}>
                       <label class="govuk-label govuk-radios__label" for="contact">
                        National Living Wage
                       </label>
@@ -228,7 +229,7 @@ div {
               
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                      <input class="govuk-radios__input" id="contact-2" name="nonappwages" type="radio" value="4.81" data-aria-controls="conditional-contact-2" {{ checked("nonappwages", "4.81") }}>
                       <label class="govuk-label govuk-radios__label" for="contact-2">
                         National Minimum Wage
                       </label>
@@ -261,7 +262,7 @@ div {
                                 From 1 April 2022, the National Minimum Wage is between £4.81 and £9.50 an hour, depending on the candidate's age.<br><br>
                                 Based on 37.5 working hours a week, you'll need to pay a yearly wage of at least £9,379.50.
                             </p>
-                            <span class="govuk-error-message field-validation-valid" id="error-message-FixedWageYearlyAmount" data-valmsg-for="FixedWageYearlyAmount" data-valmsg-replace="true"></span>
+                           
                             <div class="govuk-input__wrapper">
                                 <div class="govuk-input__suffix capt" aria-hidden="true" style="border-left:2px solid black; border-right:0px;">£</div>
                                 <input class="govuk-input govuk-!-width-one-quarter" type="text" id="FixedWageYearlyAmount" name="FixedWageYearlyAmount" value="">
@@ -273,11 +274,12 @@ div {
                 </fieldset>
               </div>
                                       
-        <br><br>
-<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="page5b">Continue</a>
-
-<a href="page4" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
-</div>
+              <br><br>
+              <button class="fiu-button fiu-button--employers">Continue</button>
+      
+              <a href="page3filtered" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
+      
+          </form>
 </div>
 </article>
 
