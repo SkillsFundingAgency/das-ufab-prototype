@@ -361,6 +361,8 @@ position: relative;">
       
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third">
+                    <form action="page4" method="post" class="form">
+
                     <div class="govuk-form-group">
                         <label class="govuk-label" for="selectedEmployer" style=" font-family: nobel,sans-serif; white-space: nowrap;" >Apprenticeship category</label>
                         <select class="govuk-select govuk-!-width-full" id="selectedEmployer" name="selectedEmployer">
@@ -580,8 +582,8 @@ position: relative;">
                 
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation" >
                     <div class="govuk-radios__item mijloc" style="margin-left:10px; padding-left: 0;">
-                        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        <input class="govuk-radios__input" id="selectedcourse-bus" name="selectedcourse" type="radio" value="Business administrator (level 3)" {{ checked("selectedcourse", "Business administrator (level 3)") }}>
+        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="selectedcourse-bus">
                          
                         </label>
                       </div>
@@ -610,8 +612,8 @@ position: relative;">
                 
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation" >
                     <div class="govuk-radios__item mijloc" style="margin-left:10px; padding-left: 0;">
-                        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        <input class="govuk-radios__input" id="selectedcourse-hr" name="selectedcourse" type="radio" value="HR support (level 3)" {{ checked("selectedcourse", "HR support (level 3)") }}>
+                        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="selectedcourse-hr">
                          
                         </label>
                       </div>
@@ -637,8 +639,8 @@ position: relative;">
                 
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation" >
                     <div class="govuk-radios__item mijloc" style="margin-left:10px; padding-left: 0;">
-                        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        <input class="govuk-radios__input" id="selectedcourse-imp" name="selectedcourse" type="radio" value="Improvement technician (level 3)" {{ checked("selectedcourse", "Improvement technician (level 3)") }}>
+                        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="selectedcourse-imp">
                          
                         </label>
                       </div>
@@ -665,8 +667,8 @@ position: relative;">
                 
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation" >
                     <div class="govuk-radios__item mijloc" style="margin-left:10px; padding-left: 0;">
-                        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        <input class="govuk-radios__input" id="selectedcourse-ler" name="selectedcourse" type="radio" value="Learning and development practitioner (level 3)" {{ checked("selectedcourse", "Learning and development practitioner (level 3)") }}>
+                        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="selectedcourse-ler">
                          
                         </label>
                       </div>
@@ -695,8 +697,8 @@ position: relative;">
                 
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation" >
                     <div class="govuk-radios__item mijloc" style="margin-left:10px; padding-left: 0;">
-                        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        <input class="govuk-radios__input" id="selectedcourse-les" name="selectedcourse" type="radio" value="Leisure duty manager (level 3)" {{ checked("selectedcourse", "Leisure duty manager (level 3)") }}>
+                        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="selectedcourse-les">
                          
                         </label>
                       </div>
@@ -772,11 +774,15 @@ position: relative;">
             </li>
     </ul>
 </nav>
-
-<br><br><div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="page4" >Continue</a>
+<br><br>
+<button class="fiu-button fiu-button--employers">Continue</button>
 
 <a href="page2" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
-</div>
+
+</form>
+
+
+
 </div>
 </article>
 

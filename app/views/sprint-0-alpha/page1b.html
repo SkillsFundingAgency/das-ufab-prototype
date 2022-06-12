@@ -283,18 +283,20 @@ position: relative;">
 <div class="govuk-grid-column-full" style=" padding: 20px 20px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
             
                                     <span class="govuk-caption-l">Question 2 of 7</span>
-                                    <h2 class="govuk-heading-l">How many employees do you have?</h2><div class="govuk-form-group">
+                                    <h2 class="govuk-heading-l">How many employees do you have?</h2>                                    
+                                    <form action="page2" method="post" class="form">
+                                    <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
    
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="where-do-you-live">1 - 49 employees
+        <input class="govuk-radios__input" id="orgsize-under" name="orgsize" type="radio" value="1 - 49 employees" {{ checked("orgsize", "1 - 49 employees") }}>
+        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="orgsize-under">1 - 49 employees
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">50+ employees
+        <input class="govuk-radios__input" id="orgsize-over" name="orgsize" type="radio" value="50+ employees" {{ checked("orgsize", "50+ employees") }}>
+        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="orgsize-over">50+ employees
         </label>
       </div>
      
@@ -302,10 +304,15 @@ position: relative;">
     </div>
 
   </fieldset>
-</div><br><br><div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="page2" >Continue</a>
+</div>
+<br><br>
+
+<button class="fiu-button fiu-button--employers">Continue</button>
 
 <a href="page1" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
-</div>
+
+
+</form>
 </div>
 </article>
 

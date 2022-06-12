@@ -212,7 +212,7 @@
                                             Annual wage bill
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                           Over £3 million
+                                            {{ data['levytype'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                           <a class="govuk-link--no-visited-state" href="page1">
@@ -225,7 +225,7 @@
                                             Organisation size
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                         1 - 49 employees
+                                            {{ data['orgsize'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                           <a class="govuk-link--no-visited-state" href="page1b">
@@ -238,7 +238,7 @@
                                           Industry
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                          Business and administration
+                                            {{ data['selectedindustry'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                           <a class="govuk-link--no-visited-state" href="page2">
@@ -257,7 +257,7 @@
                                           Apprenticeship training course
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                            Business administrator (level 3)
+                                            {{ data['selectedcourse'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                           <a class="govuk-link--no-visited-state" href="page3">
@@ -270,7 +270,7 @@
                                          Apprentice hourly rate
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                        £9.50
+                                            {{ data['appwages'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                           <a class="govuk-link--no-visited-state" href="page4">
@@ -283,7 +283,8 @@
                                          Non-apprentice hourly rate
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                        £11.50
+                                            {{ data['nonappwages'] }}
+                                           
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                           <a class="govuk-link--no-visited-state" href="page5">
@@ -296,7 +297,7 @@
                                         Productivity
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                      50%
+                                            {{ data['prod'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                           <a class="govuk-link--no-visited-state" href="page5b">

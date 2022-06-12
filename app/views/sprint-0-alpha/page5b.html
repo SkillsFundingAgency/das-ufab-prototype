@@ -204,26 +204,27 @@ div {
     </div>
   </details>
 
-
+  <form action="page6" method="post" class="form">
 <div class="govuk-form-group">
 
 
-<label class="govuk-label" for="selectedCourse" >Productivity</label>
-<select class="govuk-select govuk-!-width-one-third" id="selectedCourse" name="selectedCourse" >
-<option label="50%" aria-label="All courses" value="">50%</option>
-<option label="60%" aria-label="All courses" value="">60%</option>
-<option label="70%" aria-label="All courses" value="">70%</option>
-<option label="80%" aria-label="All courses" value="">80%</option>
+<label class="govuk-label" for="prod" >Productivity</label>
+<select class="govuk-select govuk-!-width-one-third" id="prod" name="prod" >
+<option label="50%" aria-label="All courses" name="prod" value="50%" {{ checked("prod", "50%") }}>50%</option>
+<option label="60%" aria-label="All courses" name="prod" value="60%"  {{ checked("prod", "60%") }}>60%</option>
+<option label="70%" aria-label="All courses" name="prod" value="70%"  {{ checked("prod", "70%") }}>70%</option>
+<option label="80%" aria-label="All courses" name="prod" value="80%"  {{ checked("prod", "80%") }}>80%</option>
 
 
 
 </select>
 </div>
 <br><br>
-<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="page6">Continue</a>
-
-<a href="page5" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
-</div>
+              <button class="fiu-button fiu-button--employers">Continue</button>
+              
+              <a href="page5" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
+              
+              </form>
 </div>
 </article>
 
