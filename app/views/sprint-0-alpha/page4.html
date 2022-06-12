@@ -196,7 +196,7 @@ div {
   
                                                    
 <div class="govuk-grid-column-full" style="padding: 20px 20px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">         
-    
+    <form action="page5" method="post" class="form">
                    
     <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -210,7 +210,7 @@ div {
                 
                   <div class="govuk-radios" data-module="govuk-radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="£9.50" data-aria-controls="conditional-contact" {{ checked("contact", "£9.50") }}>
                       <label class="govuk-label govuk-radios__label" for="contact">
                        National Living Wage
                       </label>
@@ -228,7 +228,7 @@ div {
               
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                      <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="£4.81" data-aria-controls="conditional-contact-2" {{ checked("contact", "£4.81") }}>
                       <label class="govuk-label govuk-radios__label" for="contact-2">
                         National Minimum Wage for apprentices
                       </label>
@@ -273,11 +273,12 @@ div {
                 </fieldset>
               </div>
                                       
-        <br><br>
-<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="page5">Continue</a>
-
-<a href="page3filtered" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
-</div>
+              <br><br>
+              <button class="fiu-button fiu-button--employers">Continue</button>
+      
+              <a href="page3filtered" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
+      
+          </form>
 </div>
 </article>
 
