@@ -158,7 +158,7 @@
     </div>
 </nav>
         
-
+{% block content %}
         
      
 <main id="main" class="fiu-main-wrapper">
@@ -270,7 +270,12 @@
                                          Apprentice hourly rate
                                         </dt>
                                         <dd class="govuk-summary-list__value">
+                                           
+                                           {% if data['appwages'] %}
                                            £{{ data['appwages'] }}
+                                         {% else %}
+                                         £{{ data['appwagess'] }}
+                                         {% endif %}
                             
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
@@ -284,7 +289,11 @@
                                          Non-apprentice hourly rate
                                         </dt>
                                         <dd class="govuk-summary-list__value">
+                                            {% if data['nonappwages'] %}
                                             £{{ data['nonappwages'] }}
+                                         {% else %}
+                                         £{{ data['nonappwagess'] }}
+                                         {% endif %}
                                            
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
@@ -373,7 +382,7 @@
 </aside>
 
 </main>
-
+{% endblock %}
     <footer class="fiu-footer">
         <div class="fiu-width-container">
             <div class="fiu-footer__apprenticeship-logo-wrap">
