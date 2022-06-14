@@ -15,107 +15,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<link rel="apple-touch-icon" href="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/apple-touch-icon.png?20220211.1">
-    <script>
-        window.onload = function(event) {
-            // Form validation - dataLayer pushes
-            var errorSummary = document.querySelector('.govuk-error-summary');
-            if (errorSummary !== null) {
-                var pageTitle = document.querySelector('h1.govuk-heading-xl').innerText;
-                var validationErrors = errorSummary.querySelectorAll('ul.govuk-error-summary__list li');
-                var numberOfErrors = validationErrors.length;
-                var validationMessage = 'Form validation';
-                var dataLayerObj;
-                if (numberOfErrors === 1) {
-                    validationMessage = validationErrors[0].innerText
-                }
-                dataLayerObj = {
-                    event: 'form submission error',
-                    page: pageTitle,
-                    message: validationMessage
-                }
-                window.dataLayer.push(dataLayerObj)
-            }
-            // Radio button selection - dataLayer pushes
-            var radioWrapper = document.querySelector('.govuk-radios');
-            if (radioWrapper !== null) {
-                var pageTitle = document.querySelector('h1.govuk-heading-xl').innerText;
-                var radios = radioWrapper.querySelectorAll('input[type=radio]');
-                var labelText;
-                var dataLayerObj;
-                nodeListForEach(radios, function(radio) {
-                    radio.addEventListener('change', function() {
-                        labelText = this.nextElementSibling.innerText;
-                        dataLayerObj = {
-                            event: 'radio button selected',
-                            page: pageTitle,
-                            radio: labelText
-                        }
-                        window.dataLayer.push(dataLayerObj)
-                    })
-                })
-            }
-        };
-        
-        function nodeListForEach(nodes, callback) {
-            if (window.NodeList.prototype.forEach) {
-                return nodes.forEach(callback)
-            }
-            for (var i = 0; i < nodes.length; i++) {
-                callback.call(window, nodes[i], i, nodes);
-            }
-        }</script>
+  
 
 	<link rel="stylesheet" href="https://use.typekit.net/xwy5uap.css">
 
-        <style>
-    
         
-        
-        .ncs-progress {
-       float: left;
-       width: 100%;
-       margin-bottom: 15px; }
-     
-     .ncs-progress__bar {
-       display: block;
-       height: 10px;
-       width: calc(100% - 80px);
-       float: right;
-       position: relative;
-       background-color: #bfc1c3;
-       border-radius: 5px;
-       overflow: hidden;
-       top: 8px; }
-       @media (min-width: 40.0625em) {
-         .ncs-progress__bar {
-           width: calc(100% - 100px);
-           top: 16px; } }
-       .ncs-progress__bar span {
-         background-color: #4d43a3;
-         height: 10px;
-         display: block;
-         width: 50%;
-         border-radius: 5px; }
-     
-     .ncs-progress__count {
-       color: #6f777b;
-       display: block;
-       width: 80px;
-       float: left;
-       text-align: left; }
-       @media (min-width: 40.0625em) {
-         .ncs-progress__count {
-           width: 100px; } }
-       .ncs-progress__count b {
-         color: #4d43a3;
-         margin-bottom: 4px;
-         display: block; }
-     
-     .ncs-progress--complete .ncs-progress__count {
-       color: #ffffff; }
-     
-     .ncs-progress--complete .ncs-progress__bar span {
-       background-color: #ffffff; }</style> 
 
 
 
@@ -257,6 +161,7 @@ div {
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-two-thirds">
         
+    
    
 
 
