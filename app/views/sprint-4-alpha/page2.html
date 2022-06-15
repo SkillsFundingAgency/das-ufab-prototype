@@ -160,12 +160,7 @@ div {
 
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-two-thirds">
-        
-    
-   
-
-
-          
+  
           
 <article class="fiu-article">
 
@@ -181,88 +176,318 @@ div {
                                     <form action="page3" method="post" class="form">
     <div class="govuk-form-group">
   
+        <style>
+            .autocomplete__wrapper{position:relative; font-family: "nobel",sans-serif;
+                font-weight: 300;
+                font-style: normal;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;}.autocomplete__hint,.autocomplete__input{-webkit-appearance:none;border:2px solid #0b0c0c;border-radius:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;margin-bottom:0;width:100%}.autocomplete__input{background-color:transparent;position:relative}.autocomplete__hint{color:#b1b4b6;position:absolute}.autocomplete__input--default{padding:5px}.autocomplete__input--focused{outline:3px solid #fd0;outline-offset:0;box-shadow:inset 0 0 0 2px}.autocomplete__input--show-all-values{padding:5px 34px 5px 5px;cursor:pointer}.autocomplete__dropdown-arrow-down{z-index:-1;display:inline-block;position:absolute;right:8px;width:24px;height:24px;top:10px}.autocomplete__menu{background-color:#fff;border:2px solid #0b0c0c;border-top:0;color:#0b0c0c;margin:0;max-height:342px;overflow-x:hidden;padding:0;width:100%;width:calc(100% - 4px)}.autocomplete__menu--visible{display:block}.autocomplete__menu--hidden{display:none;}.autocomplete__menu--overlay{box-shadow:rgba(0,0,0,.256863) 0 2px 6px;left:0;position:absolute;top:100%;z-index:100}.autocomplete__menu--inline{position:relative}.autocomplete__option{border-bottom:solid #b1b4b6;border-width:1px 0;cursor:pointer;display:block;position:relative}.autocomplete__option>*{pointer-events:none}.autocomplete__option:first-of-type{border-top-width:0}.autocomplete__option:last-of-type{border-bottom-width:0}.autocomplete__option--odd{background-color:#fafafa}.autocomplete__option--focused,.autocomplete__option:hover{background-color:#1d70b8;border-color:#1d70b8;color:#fff;outline:0}@media (-ms-high-contrast:active),(forced-colors:active){.autocomplete__menu{border-color:FieldText}.autocomplete__option{background-color:Field;color:FieldText}.autocomplete__option--focused,.autocomplete__option:hover{forced-color-adjust:none;background-color:SelectedItem;border-color:SelectedItem;color:SelectedItemText;outline-color:SelectedItemText}}.autocomplete__option--no-results{background-color:#fafafa;color:#646b6f;cursor:not-allowed}.autocomplete__hint,.autocomplete__input,.autocomplete__option{font-size:16px;line-height:1.25}.autocomplete__hint,.autocomplete__option{padding:5px}@media (min-width:641px){.autocomplete__hint,.autocomplete__input,.autocomplete__option{font-size:19px;line-height:1.31579}}
+     
+     
+           </style>
+             
+     
+         
+         <script type="text/javascript" src="https://alphagov.github.io/accessible-autocomplete/dist/accessible-autocomplete.min.js"></script>
+     
+         <label class="govuk-label" for="autocomplete-minLength">Industry sector</label>
+         <div id="tt-minLength" class="autocomplete-wrapper govuk-!-width-two-thirds">
+            <div class="autocomplete__wrapper" style="display: none;">
+                <div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+                    <div id="autocomplete-minLength__status--A" role="status" aria-atomic="true" aria-live="polite"></div>
+                    <div id="autocomplete-minLength__status--B" role="status" aria-atomic="true" aria-live="polite"></div>
+              </div>
+            <input aria-expanded="false" aria-owns="autocomplete-minLength__listbox" aria-autocomplete="list" autocomplete="off" class="autocomplete__input autocomplete__input--default" id="autocomplete-minLength"  name="input-autocomplete"  type="text" role="combobox" aria-describedby="autocomplete-minLength__assistiveHint">
+            <ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden" id="autocomplete-minLength__listbox" role="listbox"></ul>
+            <span id="autocomplete-minLength__assistiveHint">When autocomplete results are available use up and down arrows to review and enter to select.  Touch device users, explore by touch or with swipe gestures.</span>
+          </div>
+        </div>
+     
+         <script type="text/javascript">
+             var countries = [
+               'Agriculture',
+               'Akrotiri',
+               'Albania',
+               'Algeria',
+               'American Samoa',
+               'Andorra',
+               'Angola',
+               'Anguilla',
+               'Antarctica',
+               'Antigua and Barbuda',
+               'Argentina',
+               'Armenia',
+               'Aruba',
+               'Ashmore and Cartier Islands',
+               'Australia',
+               'Austria',
+               'Azerbaijan',
+               'Bahamas, The',
+               'Bahrain',
+               'Bangladesh',
+               'Barbados',
+               'Bassas da India',
+               'Belarus',
+               'Belgium',
+               'Belize',
+               'Benin',
+               'Bermuda',
+               'Bhutan',
+               'Bolivia',
+               'Bosnia and Herzegovina',
+               'Botswana',
+               'Bouvet Island',
+               'Brazil',
+               'British Indian Ocean Territory',
+               'British Virgin Islands',
+               'Brunei',
+               'Bulgaria',
+               'Burkina Faso',
+               'Burma',
+               'Burundi',
+               'Cambodia',
+               'Cameroon',
+               'Canada',
+               'Cape Verde',
+               'Cayman Islands',
+               'Central African Republic',
+               'Chad',
+               'Chile',
+               'China',
+               'Christmas Island',
+               'Clipperton Island',
+               'Cocos (Keeling) Islands',
+               'Colombia',
+               'Comoros',
+               'Congo',
+               'Cook Islands',
+               'Coral Sea Islands',
+               'Costa Rica',
+               'Cote d\'Ivoire',
+               'Croatia',
+               'Cuba',
+               'Cyprus',
+               'Czech Republic',
+               'Denmark',
+               'Dhekelia',
+               'Djibouti',
+               'Dominica',
+               'Dominican Republic',
+               'Ecuador',
+               'Egypt',
+               'El Salvador',
+               'Equatorial Guinea',
+               'Eritrea',
+               'Estonia',
+               'Ethiopia',
+               'Europa Island',
+               'Falkland Islands',
+               'Faroe Islands',
+               'Fiji',
+               'Finland',
+               'France',
+               'French Guiana',
+               'French Polynesia',
+               'French Southern and Antarctic Lands',
+               'Gabon',
+               'Gambia,',
+               'Gaza Strip',
+               'Georgia',
+               'Germany',
+               'Ghana',
+               'Gibraltar',
+               'Glorioso Islands',
+               'Greece',
+               'Greenland',
+               'Grenada',
+               'Guadeloupe',
+               'Guam',
+               'Guatemala',
+               'Guernsey',
+               'Guinea',
+               'Guinea-Bissau',
+               'Guyana',
+               'Haiti',
+               'Heard Island and McDonald Islands',
+               'Holy See (Vatican City)',
+               'Honduras',
+               'Hong Kong',
+               'Hungary',
+               'Iceland',
+               'India',
+               'Indonesia',
+               'Iran',
+               'Iraq',
+               'Ireland',
+               'Isle of Man',
+               'Israel',
+               'Italy',
+               'Jamaica',
+               'Jan Mayen',
+               'Japan',
+               'Jersey',
+               'Jordan',
+               'Juan de Nova Island',
+               'Kazakhstan',
+               'Kenya',
+               'Kiribati',
+               'Korea, North',
+               'Korea, South',
+               'Kuwait',
+               'Kyrgyzstan',
+               'Laos',
+               'Latvia',
+               'Lebanon',
+               'Lesotho',
+               'Liberia',
+               'Libya',
+               'Liechtenstein',
+               'Lithuania',
+               'Luxembourg',
+               'Macau',
+               'Macedonia',
+               'Madagascar',
+               'Malawi',
+               'Malaysia',
+               'Maldives',
+               'Mali',
+               'Malta',
+               'Marshall Islands',
+               'Martinique',
+               'Mauritania',
+               'Mauritius',
+               'Mayotte',
+               'Mexico',
+               'Micronesia, Federated States of',
+               'Moldova',
+               'Monaco',
+               'Mongolia',
+               'Montserrat',
+               'Morocco',
+               'Mozambique',
+               'Namibia',
+               'Nauru',
+               'Navassa Island',
+               'Nepal',
+               'Netherlands',
+               'Netherlands Antilles',
+               'New Caledonia',
+               'New Zealand',
+               'Nicaragua',
+               'Niger',
+               'Nigeria',
+               'Niue',
+               'Norfolk Island',
+               'Northern Mariana Islands',
+               'Norway',
+               'Oman',
+               'Pakistan',
+               'Palau',
+               'Panama',
+               'Papua New Guinea',
+               'Paracel Islands',
+               'Paraguay',
+               'Peru',
+               'Philippines',
+               'Pitcairn Islands',
+               'Poland',
+               'Portugal',
+               'Puerto Rico',
+               'Qatar',
+               'Reunion',
+               'Romania',
+               'Russia',
+               'Rwanda',
+               'Saint Helena',
+               'Saint Kitts and Nevis',
+               'Saint Lucia',
+               'Saint Pierre and Miquelon',
+               'Saint Vincent and the Grenadines',
+               'Samoa',
+               'San Marino',
+               'Sao Tome and Principe',
+               'Saudi Arabia',
+               'Senegal',
+               'Serbia and Montenegro',
+               'Seychelles',
+               'Sierra Leone',
+               'Singapore',
+               'Slovakia',
+               'Slovenia',
+               'Solomon Islands',
+               'Somalia',
+               'South Africa',
+               'South Georgia and the South Sandwich Islands',
+               'Spain',
+               'Spratly Islands',
+               'Sri Lanka',
+               'Sudan',
+               'Suriname',
+               'Svalbard',
+               'Swaziland',
+               'Sweden',
+               'Switzerland',
+               'Syria',
+               'Taiwan',
+               'Tajikistan',
+               'Tanzania',
+               'Thailand',
+               'Timor-Leste',
+               'Togo',
+               'Tokelau',
+               'Tonga',
+               'Trinidad and Tobago',
+               'Tromelin Island',
+               'Tunisia',
+               'Turkey',
+               'Turkmenistan',
+               'Turks and Caicos Islands',
+               'Tuvalu',
+               'Uganda',
+               'Ukraine',
+               'United Arab Emirates',
+               'United Kingdom',
+               'United States',
+               'Uruguay',
+               'Uzbekistan',
+               'Vanuatu',
+               'Venezuela',
+               'Vietnam',
+               'Virgin Islands',
+               'Wake Island',
+               'Wallis and Futuna',
+               'West Bank',
+               'Western Sahara',
+               'Yemen',
+               'Zambia',
+               'Zimbabwe'
+             ]
+           </script>
+       
+          
+       
+           <script type="text/javascript">
+             element = document.querySelector('#tt-minLength')
+             id = 'autocomplete-minLength'
+             accessibleAutocomplete({
+               element: element,
+               id: id,
+               minLength: 2,
+               source: countries
+               
+             })
             
-                <label class="govuk-label" for="selectedindustry" >Industry sector</label>
-                <select class="govuk-select govuk-!-width-three-quarters" id="selectedindustry" name="selectedindustry">
-                    <option label="Select an industry sector" aria-label="All courses"  value="" style="font-family: nobel,sans-serif;
-                    font-weight: 300;
-                    font-style: normal;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;">Select an industry sector</option>
-                    <option label="Agriculture, environmental and animal care" aria-label="All courses" name="selectedindustry" value="Agriculture, environmental and animal care" style="font-family: nobel,sans-serif;
-                    font-weight: 300;
-                    font-style: normal;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Agriculture, environmental and animal care") }}>Agriculture, environmental and animal care</option>
-                      <option label="Business and administration" aria-label="All courses" name="selectedindustry" value="Business and administration" style="font-family: nobel,sans-serif;
-                      font-weight: 300;
-                      font-style: normal;
-                      -webkit-font-smoothing: antialiased;
-                      -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Business and administration") }}>Business and administration</option>
-                        <option label="Care services" aria-label="All courses" name="selectedindustry" value="Care services" style="font-family: nobel,sans-serif;
-                        font-weight: 300;
-                        font-style: normal;
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Care services") }}>Care services</option>
-                          <option label="Catering and hospitality" aria-label="All courses" name="selectedindustry" value="Catering and hospitality" style="font-family: nobel,sans-serif;
-                          font-weight: 300;
-                          font-style: normal;
-                          -webkit-font-smoothing: antialiased;
-                          -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Catering and hospitality") }}>Catering and hospitality</option>
-                            <option label="Construction and the built environment" aria-label="All courses" name="selectedindustry" value="Construction and the built environment" style="font-family: nobel,sans-serif;
-                            font-weight: 300;
-                            font-style: normal;
-                            -webkit-font-smoothing: antialiased;
-                            -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Construction and the built environment") }}>Construction and the built environment</option>
-                              <option label="Creative and design" aria-label="All courses" name="selectedindustry" value="Creative and design" style="font-family: nobel,sans-serif;
-                              font-weight: 300;
-                              font-style: normal;
-                              -webkit-font-smoothing: antialiased;
-                              -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Creative and design") }}>Creative and design</option>
-                                <option label="Digital" aria-label="All courses" name="selectedindustry" value="Digital" style="font-family: nobel,sans-serif;
-                                font-weight: 300;
-                                font-style: normal;
-                                -webkit-font-smoothing: antialiased;
-                                -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Digital") }}>Digital</option>
-                                  <option label="Education and childcare" aria-label="All courses" name="selectedindustry" value="Education and childcare" style="font-family: nobel,sans-serif;
-                                  font-weight: 300;
-                                  font-style: normal;
-                                  -webkit-font-smoothing: antialiased;
-                                  -moz-osx-font-smoothing: grayscale;"  {{ checked("selectedindustry", "Education and childcare") }}>Education and childcare</option>
-                                    <option label="Engineering and manufacturing" aria-label="All courses" name="selectedindustry" value="Engineering and manufacturing" style="font-family: nobel,sans-serif;
-                                    font-weight: 300;
-                                    font-style: normal;
-                                    -webkit-font-smoothing: antialiased;
-                                    -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Engineering and manufacturing") }}>Engineering and manufacturing</option>
-                                      <option label="Hair and beauty" aria-label="All courses" name="selectedindustry" value="Hair and beauty" style="font-family: nobel,sans-serif;
-                                      font-weight: 300;
-                                      font-style: normal;
-                                      -webkit-font-smoothing: antialiased;
-                                      -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Hair and beauty") }}>Hair and beauty</option>
-                                        <option label="Health and science" aria-label="All courses" name="selectedindustry" value="Health and science" style="font-family: nobel,sans-serif;
-                                        font-weight: 300;
-                                        font-style: normal;
-                                        -webkit-font-smoothing: antialiased;
-                                        -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Health and science") }}>Health and science</option>
-                                          <option label="Legal, finance and accounting" aria-label="All courses" name="selectedindustry" value="Legal, finance and accounting" style="font-family: nobel,sans-serif;
-                                          font-weight: 300;
-                                          font-style: normal;
-                                          -webkit-font-smoothing: antialiased;
-                                          -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Legal, finance and accounting") }}>Legal, finance and accounting</option>
-                                            <option label="Protective services" aria-label="All courses" name="selectedindustry" value="Protective services" style="font-family: nobel,sans-serif;
-                                            font-weight: 300;
-                                            font-style: normal;
-                                            -webkit-font-smoothing: antialiased;
-                                            -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Protective services") }}>Protective services</option>
-                                              <option label="Sales, marketing and procurement" aria-label="All courses" name="selectedindustry" value="Sales, marketing and procurement" style="font-family: nobel,sans-serif;
-                                              font-weight: 300;
-                                              font-style: normal;
-                                              -webkit-font-smoothing: antialiased;
-                                              -moz-osx-font-smoothing: grayscale;" {{ checked("selectedindustry", "Sales, marketing and procurement") }}>Sales, marketing and procurement</option>
-                                               
-                           
-                           
-                </select>
+
+
+           </script>
+
+
+
+
+
+
+            
+                
             </div>
         <br><br>
         <button class="fiu-button fiu-button--employers" style="margin-right:10px;">Continue</button>
