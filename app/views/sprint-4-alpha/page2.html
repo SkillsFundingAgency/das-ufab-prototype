@@ -194,13 +194,13 @@ div {
          <script type="text/javascript" src="https://alphagov.github.io/accessible-autocomplete/dist/accessible-autocomplete.min.js"></script>
      
          <label class="govuk-label" for="autocomplete-minLength">Industry sector</label>
-         <div id="tt-minLength" class="autocomplete-wrapper govuk-!-width-two-thirds" style="font-family: nobel,sans-serif; font-weight: 300; font-style: normal;">
+         <div id="tt-minLength" class="autocomplete-wrapper"  style="font-family: nobel,sans-serif; font-weight: 300; font-style: normal;">
             <div class="autocomplete__wrapper" style="display: none; font-family: nobel,sans-serif; font-weight: 300; font-style: normal;">
                 <div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px; font-family: nobel,sans-serif; font-weight: 300; font-style: normal;">
                     <div id="autocomplete-minLength__status--A" role="status" aria-atomic="true" aria-live="polite"></div>
                     <div id="autocomplete-minLength__status--B" role="status" aria-atomic="true" aria-live="polite"></div>
               </div>
-            <input aria-expanded="false" aria-owns="autocomplete-minLength__listbox" aria-autocomplete="list" autocomplete="off" class="autocomplete__input autocomplete__input--default" id="autocomplete-minLength"  name="input-autocomplete"  placeholder="Start typing to search industry sectors" type="text" role="combobox" aria-describedby="autocomplete-minLength__assistiveHint" style="font-family: nobel,sans-serif; font-weight: 300; font-style: normal;">
+            <input aria-expanded="false" aria-owns="autocomplete-minLength__listbox" aria-autocomplete="list" autocomplete="off" class="autocomplete__input autocomplete__input--default" id="autocomplete-minLength"  name="input-autocomplete" placeholder="" type="text" role="combobox" aria-describedby="autocomplete-minLength__assistiveHint" style="font-family: nobel,sans-serif; font-weight: 300; font-style: normal;">
             <ul class="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden" id="autocomplete-minLength__listbox" role="listbox"></ul>
             <span id="autocomplete-minLength__assistiveHint">When autocomplete results are available use up and down arrows to review and enter to select.  Touch device users, explore by touch or with swipe gestures.</span>
           </div>
@@ -287,7 +287,7 @@ div {
              accessibleAutocomplete({
                element: element,
                id: id,
-               minLength: 3,
+               minLength: 2,
                source: countries
                
              })
