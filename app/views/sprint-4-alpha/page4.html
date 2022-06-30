@@ -210,42 +210,7 @@ div {
               </legend>
                 
                   <div class="govuk-radios" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="contact" name="appwages" type="radio" value="9.50" data-aria-controls="conditional-contact" {{ checked("appwages", "9.50") }}>
-                      <label class="govuk-label govuk-radios__label" for="contact">
-                       National Living Wage
-                      </label>
-                    </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                        <div class="govuk-form-group">
-                            <p class="govuk-body">
-                                <span class="govuk-hint capt">
-                                    Candidates need to be aged 23 or over to get the National Living Wage - the minimum wage will still apply for candidates aged 22 and under.<br><br>From 1 April 2022, the National Living Wage is £9.50 an hour. <br><br>
-                                    This amounts to a yearly wage of £18,525.
-                                </span>
-                            </p>
-                            
-                          </div>
-              
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="contact-2" name="appwages" type="radio" value="4.81" data-aria-controls="conditional-contact-2" {{ checked("appwages", "4.81") }}>
-                      <label class="govuk-label govuk-radios__label" for="contact-2">
-                        National Minimum Wage for apprentices
-                      </label>
-                    </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                      <div class="govuk-form-group">
-                        <p class="govuk-body">
-                            <span class="govuk-hint capt">
-                                From 1 April 2022, the National Minimum Wage for apprentices is £4.81 an hour.<br><br>
-                                This amounts to a yearly wage of £9,379.50.
-                            </span>
-                        </p>
-                        
-                      </div>
-              
-                    </div>
+                  
                     
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="contact-3" name="appwages" value="{{ data['appwagess'] }}" type="radio" data-aria-controls="conditional-contact-3">
@@ -270,8 +235,48 @@ div {
                                 <div class="govuk-input__suffix capt" aria-hidden="true">hourly</div>
                             </div>
                         </div>
+
+
+                        
                   </div>
-              
+                  
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-2" name="appwages" type="radio" value="4.81" data-aria-controls="conditional-contact-2" {{ checked("appwages", "4.81") }}>
+                    <label class="govuk-label govuk-radios__label" for="contact-2">
+                      National Minimum Wage for apprentices
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                    <div class="govuk-form-group">
+                      <p class="govuk-body">
+                          <span class="govuk-hint capt">
+                              From 1 April 2022, the National Minimum Wage for apprentices is £4.81 an hour.<br><br>
+                              This amounts to a yearly wage of £9,379.50.
+                          </span>
+                      </p>
+                      
+                    </div>
+                    
+            
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact" name="appwages" type="radio" value="9.50" data-aria-controls="conditional-contact" {{ checked("appwages", "9.50") }}>
+                    <label class="govuk-label govuk-radios__label" for="contact">
+                     National Living Wage
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                      <div class="govuk-form-group">
+                          <p class="govuk-body">
+                              <span class="govuk-hint capt">
+                                  Candidates need to be aged 23 or over to get the National Living Wage - the minimum wage will still apply for candidates aged 22 and under.<br><br>From 1 April 2022, the National Living Wage is £9.50 an hour. <br><br>
+                                  This amounts to a yearly wage of £18,525.
+                              </span>
+                          </p>
+                          
+                        </div>
+            
+                  </div>
                 </fieldset>
               </div>
                                       
