@@ -268,14 +268,14 @@
                                       </div>
                                       <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
-                                         Apprentice hourly rate
+                                         Apprentice wage
                                         </dt>
                                         <dd class="govuk-summary-list__value">
                                            
                                            {% if data['appwages'] %}
-                                           £{{ data['appwages'] }}
+                                           £{{ data['appwages'] }} yearly 
                                          {% else %}
-                                         £{{ data['appwagez'] }}
+                                         £{{ data['appwagez'] }} hourly
                                          {% endif %}
 
                                          
@@ -289,13 +289,13 @@
                                       </div>
                                       <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
-                                         Non-apprentice hourly rate
+                                         Non-apprentice wage
                                         </dt>
                                         <dd class="govuk-summary-list__value">
                                             {% if data['nonappwages'] %}
-                                            £{{ data['nonappwages'] }}
+                                            £{{ data['nonappwages'] }} yearly
                                          {% else %}
-                                         £{{ data['nonappwagezz'] }}
+                                         £{{ data['nonappwagezz'] }} hourly
                                          {% endif %}
                                            
                                         </dd>
