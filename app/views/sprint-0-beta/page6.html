@@ -272,8 +272,8 @@
                                         </dt>
                                         <dd class="govuk-summary-list__value">
                                            
-                                           {% if data['appwages'] %}
-                                           £{{ data['appwages'] }} yearly 
+                                           {% if data['appwagess'] %}
+                                           £{{ data['appwagess'] }} yearly
                                          {% else %}
                                          £{{ data['appwagez'] }} hourly
                                          {% endif %}
@@ -292,10 +292,10 @@
                                          Non-apprentice wage
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                            {% if data['nonappwages'] %}
-                                            £{{ data['nonappwages'] }} yearly
+                                            {% if data['nonappwagess'] %}
+                                            £{{ data['nonappwagess'] }} yearly
                                          {% else %}
-                                         £{{ data['nonappwagezz'] }} hourly
+                                         £{{ data['nonappwagezz'] }} hourly 
                                          {% endif %}
                                            
                                         </dd>
