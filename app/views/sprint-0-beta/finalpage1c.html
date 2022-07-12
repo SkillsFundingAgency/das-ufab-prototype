@@ -528,16 +528,16 @@ position: relative;">
     </tr>
   </thead>
   <tbody class="govuk-table__body">
-{%  if data['levytype'] == "Under £3 million" %}
+{%  if data['coinvest'] == "true" or data['levytype'] == "Under £3 million" %}
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">CoInvest(training)</th>
+      <th scope="row" class="govuk-table__header">Training</th>
     
-      <td class="govuk-table__cell dreapta verde" >£5,700</td>
+      <td class="govuk-table__cell dreapta verde" >£5,700(CoInvest)</td>
       <td class="govuk-table__cell dreapta galben" style="padding-right:15px;">£300</td>
     </tr>
 {% else %}
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Apprentice training</th>
+      <th scope="row" class="govuk-table__header">Training</th>
     
       <td class="govuk-table__cell dreapta verde" >£0</td>
       <td class="govuk-table__cell dreapta galben" style="padding-right:15px;">£6000</td>

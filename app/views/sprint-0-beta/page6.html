@@ -160,7 +160,17 @@
         
 {% block content %}
         
-     
+     <style>
+         
+ 
+        img {
+          padding: 0;
+          display: block;
+          margin: 0 auto;
+          max-height: 100%;
+          max-width: 100%;
+      }
+     </style>
 <main id="main" class="fiu-main-wrapper">
     <div class="fiu-page-header ">
         <div class="fiu-width-container">
@@ -210,12 +220,13 @@
                                     <h2 class="govuk-heading-m">Your organisation details</h2>
                             
                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                           
                                       <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
-                                            Annual pay bill
+                                            Organisation size
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                            {{ data['levytype'] }}
+                                            {{ data['orgsize'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                           <a class="govuk-link--no-visited-state" href="page1">
@@ -225,10 +236,10 @@
                                       </div>
                                       <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
-                                            Organisation size
+                                            Annual pay bill
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                            {{ data['orgsize'] }}
+                                            {{ data['levytype'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                           <a class="govuk-link--no-visited-state" href="page1b">
@@ -337,10 +348,19 @@
         
     <div class="fiu-panel fiu-panel--narrow-col" style="padding-left: 20px; padding-right:20px;  padding-bottom: 10px;">
 <h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Diversity within your workforce</h2>
+<div class="imgbox"> <img class="" src='/public/images/susan.jpeg'></div><br>
 <p class="govuk-body-m"  style="text-align: left; font-style: italic;">"We are the department for realising potential. By recognising the profound power in diversity and difference, we will go further and do more to be a place where people from all backgrounds can thrive.This is important because diverse organisations make better decisions, and that in turn means we can do better for the children and learners we serve".
     <br><strong style="font-size: 21px;">Susan Ackland Hood<br></strong>PERMANENT SECRETARY, DEPARTMENT FOR EDUCATION</p>
-<hr>
-<br>
+
+
+
+</div>
+
+
+       
+<div class="fiu-panel fiu-panel--narrow-col" style="padding-left: 20px; padding-right:20px;  padding-bottom: 10px;">
+    <h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Additional support</h2>
+    
 <p class="govuk-body-m" style="text-align: left;">Additional support is available to employers who wish to train young or disadvantaged people. <br>Employers and training providers could get £1,000 each for taking on an apprentice who is either:
 
     <ul class="govuk-list govuk-list--bullet" style="text-align: left;">
@@ -353,11 +373,7 @@
     </p>
     <p class="govuk-body-m" style="text-align: left;">
     You can recruit an apprentice while they are still at school but they will need to be 16 or over by the end of the summer holidays to start the apprenticeship.</p>
-
-</div>
-
-
-
+    </div>
 
 
 </main>
