@@ -9,7 +9,7 @@
    
 
 	<meta charset="utf-8">
-	<title>Return on investment tool</title>
+	<title>Funding and benefits calculator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#0b0c0c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -185,13 +185,13 @@
                         <li class="govuk-breadcrumbs__list-item">
                             <a href="#" class="govuk-breadcrumbs__link">ARE THEY RIGHT FOR YOU?</a>
                         </li>
-                                <li class="govuk-breadcrumbs__list-item">Return on investment</li>
+                                <li class="govuk-breadcrumbs__list-item">Funding and benefits calculator</li>
                 </ol>
             </div>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds fiu-page-header__wrap">
                         <strong class="fiu-tag fiu-tag--employers fiu-page-header__tag fiu-feature-text">Employers</strong>
-                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Return on investment</h1>
+                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Funding and benefits calculator</h1>
                     <img class="fiu-page-header__hm-logo" src="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/hm-government-logo.svg" alt="HM Government logo">
                 </div>
             </div>
@@ -206,8 +206,11 @@
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-two-thirds">
         
-   
-
+<style>
+    .govuk-link--no-visited-state:visited {
+    color: #1d70b8;
+}
+</style>
           
 <article class="fiu-article">
 
@@ -215,119 +218,104 @@
 
 
     <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
-                                    <h1 class="govuk-heading-l">Check your answers</h1>
+        <h1 class="govuk-heading-l">You have added the following apprenticeships</h1>
 
-                                    <h2 class="govuk-heading-m">Your organisation details</h2>
-                            
-                                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                           
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                            Organisation size
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                            {{ data['orgsize'] }}
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page1">
-                                            Change<span class="govuk-visually-hidden"> name</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                            Annual pay bill
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                            {{ data['levytype'] }}
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page1b">
-                                            Change<span class="govuk-visually-hidden"> name</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                          Industry
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                           {{ data['input-autocomplete'] }}    
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page2">
-                                            Change<span class="govuk-visually-hidden"> date of birth</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                     
-                                    </dl>
-                            
-                                    <h2 class="govuk-heading-m">Your potential hire details</h2>
-                            
-                                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                          Apprenticeship training course
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                            
-                                            {{ data['selectedcourse'] }}
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page3">
-                                            Change<span class="govuk-visually-hidden"> previous application number</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                         Apprentice wage
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                           
-                                           {% if data['appwagess'] %}
-                                           £{{ data['appwagess'] }} yearly
-                                         {% else %}
-                                         £{{ data['appwagez'] }} hourly
-                                         {% endif %}
 
-                                         
-                            
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page4">
-                                            Change<span class="govuk-visually-hidden"> home address</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                         Non-apprentice wage
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                            {% if data['nonappwagess'] %}
-                                            £{{ data['nonappwagess'] }} yearly
-                                         {% else %}
-                                         £{{ data['nonappwagezz'] }} hourly 
-                                         {% endif %}
-                                           
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page5">
-                                            Change<span class="govuk-visually-hidden"> home address</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                    
-                                     
-                                    </dl>
+        <form method="post">
+        <div class="govuk-form-group">
+        
+          <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--short">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+                Accountancy or taxation professional (level 7)
+              </dt>
+              <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+                <ul class="govuk-summary-list__actions-list">
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link--no-visited-state" href="#"><span aria-hidden="true" style="color:#1d70b8; text-decoration: underline;
+                        text-decoration-color:#1d70b8;">Change</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a>
+                  </li>
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link--no-visited-state" href="#"><span aria-hidden="true" style="color:#1d70b8; text-decoration: underline;
+                        text-decoration-color:#1d70b8;">Remove</span><span class="govuk-visually-hidden">Remove Sydney Russell from the list</span></a>
+                  </li>
+                </ul>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+                Academic professional (level 7)
+              </dt>
+              <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+                <ul class="govuk-summary-list__actions-list">
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link--no-visited-state" href="#"><span aria-hidden="true" style="color:#1d70b8; text-decoration: underline;
+                        text-decoration-color:#1d70b8;">Change</span><span class="govuk-visually-hidden">Change Michael Cain</span></a>
+                  </li>
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link--no-visited-state" href="#"><span aria-hidden="true" style="color:#1d70b8; text-decoration: underline;
+                        text-decoration-color: #1d70b8;">Remove</span><span class="govuk-visually-hidden">Remove Michael Cain from the list</span></a>
+                  </li>
+                </ul>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+                Business administrator (level 3)
+              </dt>
+              <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+                <ul class="govuk-summary-list__actions-list">
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link--no-visited-state" href="page3"><span aria-hidden="true" style="color:#1d70b8; text-decoration: underline;
+                        text-decoration-color: #1d70b8;">Change</span><span class="govuk-visually-hidden">Change apprenticeship details</span></a>
+                  </li>
+                  <li class="govuk-summary-list__actions-list-item">
+                    <a class="govuk-link--no-visited-state" href="#"><span aria-hidden="true" style="color:#1d70b8;
+                       text-decoration: underline; text-decoration-color: #1d70b8;">Remove</span><span class="govuk-visually-hidden">Remove Jeremy Winter from the list</span></a>
+                  </li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        
+        </div>
+       
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+               Would you like to add any more apprenticeships?
+              </legend>
+              <div id="add-another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
+              font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased;">
+                You can add as many as you want.
+              </div>
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+                  <label class="govuk-label govuk-radios__label" for="add-another">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="add-another-2">
+                    No
+                  </label>
+                </div>
+              </div>
+        
+            </fieldset>
+          </div>
+        
+        
+     
                             
                                   
         <br>
-<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="finalpage1b">Calculate ROI</a>
+<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="page4">Continue</a>
 
-<a href="page5" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
+<a href="page3" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
+</form> 
 </div>
 </div>
 </article>
@@ -346,15 +334,6 @@
             
       
         
-    <div class="fiu-panel fiu-panel--narrow-col" style="padding-left: 20px; padding-right:20px;  padding-bottom: 10px;">
-<h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Diversity within your workforce</h2>
-<div class="imgbox"> <img class="" src='/public/images/susan.jpeg'></div><br>
-<p class="govuk-body-m"  style="text-align: left; font-style: italic;">"We are the department for realising potential. By recognising the profound power in diversity and difference, we will go further and do more to be a place where people from all backgrounds can thrive.This is important because diverse organisations make better decisions, and that in turn means we can do better for the children and learners we serve".
-    <br><strong style="font-size: 21px;">Susan Ackland Hood<br></strong>PERMANENT SECRETARY, DEPARTMENT FOR EDUCATION</p>
-
-
-
-</div>
 
 
        
