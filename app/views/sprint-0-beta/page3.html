@@ -1,5 +1,5 @@
 
-{% from "govuk/components/input/macro.njk" import govukInput %}
+
 <!DOCTYPE html>
 
 
@@ -9,86 +9,53 @@
    
 
 	<meta charset="utf-8">
-	<title>Funding and benefits calculator</title>
+	<title>  Funding and benefits calculator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#0b0c0c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<link rel="apple-touch-icon" href="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/apple-touch-icon.png?20220211.1">
+   
+
+	<link rel="stylesheet" href="https://use.typekit.net/xwy5uap.css">
+
+      
+
+
+
     
-    <style>
+ <style>
      
 
-        @import url("https://p.typekit.net/p.css?s=1&k=xwy5uap&ht=tk&f=31225.31226.31227.31228.31229.31231&a=18525665&app=typekit&e=css");
-   
-   @font-face {
-   font-family:"nobel";
-   src:url("https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/7aa05f/00000000000000003b9ae848/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
-   font-display:auto;font-style:normal;font-weight:200;font-stretch:normal;
-   }
-   
-   @font-face {
-   font-family:"nobel";
-   src:url("https://use.typekit.net/af/5e4a03/00000000000000003b9ae849/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff2"),url("https://use.typekit.net/af/5e4a03/00000000000000003b9ae849/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff"),url("https://use.typekit.net/af/5e4a03/00000000000000003b9ae849/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("opentype");
-   font-display:auto;font-style:italic;font-weight:200;font-stretch:normal;
-   }
-   
-   @font-face {
-   font-family:"nobel";
-   src:url("https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/8c68f7/00000000000000003b9ae84a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
-   font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
-   }
-   
-   @font-face {
-   font-family:"nobel";
-   src:url("https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/2f8a18/00000000000000003b9ae84b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
-   font-display:auto;font-style:italic;font-weight:300;font-stretch:normal;
-   }
-   
-   @font-face {
-   font-family:"nobel";
-   src:url("https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9e0ad7/00000000000000003b9ae84c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-   font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
-   }
-   
-   @font-face {
-   font-family:"nobel";
-   src:url("https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/cab4b1/00000000000000003b9ae84e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
-   font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
-   }
-   
-   .tk-nobel { font-family: "nobel",sans-serif; }
-   
-   
-        .fiu-page-header {
-       font-family: nobel,sans-serif;
-       font-weight: 300;
-       font-style: normal;
-       -webkit-font-smoothing: antialiased;
-       -moz-osx-font-smoothing: grayscale;
-       background-color: #000;
-       padding: 1px 0;
-       color: #fff;
-       position: relative;
-   }
-   
-   
-   * {
-       box-sizing: border-box;
-   }
-   
-   div {
-       display: block;
-   }
-   .govuk-template, .fiu-template {
-       background-color: #f3f2f1;
-       -webkit-text-size-adjust: 100%;
-       -ms-text-size-adjust: 100%;
-       text-size-adjust: 100%;
-   }
 
-   
-       .govuk-link{font-family:"nobel",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-decoration:underline;text-decoration-thickness:max(1px, .0625rem);text-underline-offset:.1em}
+
+     .fiu-page-header {
+    font-family: nobel,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000;
+    padding: 1px 0;
+    color: #fff;
+    position: relative;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+.govuk-template, .fiu-template {
+    background-color: #f3f2f1;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+    .govuk-link{font-family:"GDS Transport",arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-decoration:underline;text-decoration-thickness:max(1px, .0625rem);text-underline-offset:.1em}
     
     
     
@@ -151,26 +118,16 @@
                         <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-1" href="#" class="fiu-navigation__link">Are they right for you?</a> </li>
                         <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-2" href="#" class="fiu-navigation__link">How do they work?</a> </li>
                         <li class="fiu-navigation__list-item"><a id="fiu-emp-menu-link-3" href="#" class="fiu-navigation__link">Setting it up</a> </li>
-                      
+                       
 
             </ul>
         </nav>
     </div>
 </nav>
         
-{% block content %}
+
         
-     <style>
-         
- 
-        img {
-          padding: 0;
-          display: block;
-          margin: 0 auto;
-          max-height: 100%;
-          max-width: 100%;
-      }
-     </style>
+     
 <main id="main" class="fiu-main-wrapper">
     <div class="fiu-page-header ">
         <div class="fiu-width-container">
@@ -200,89 +157,89 @@
     </div>
 
 <span class="fiu-header-content-spacer"></span>
-<br><br>
+
+
 <div class="fiu-width-container">
 
-<div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
-        
-   
-
-          
-<article class="fiu-article">
-
-
-
-
-    <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
-        <h1 class="govuk-heading-l">How many positions would you have available for this apprenticeship?</h1>
-        <form method="post">
-        <div class="govuk-form-group">
-        <h3 class="govuk-heading-m"> Business administrator (level 3)  </h3>
-                  <p class="govuk-body-s"> Supporting and engaging with different parts of the organisation and interact with internal or external customers.</p>
-                  <p class="govuk-body-s govuk-!-margin-bottom-6">
-                    Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/business-administrator-v1-0" target="_blank" rel="external">Business administrator (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
-                </p>
-        
-        </div>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            
        
-        {{ govukInput({
-            label: {
-              text: "Number of positions available"
-            },
-            classes: "govuk-input--width-3",
-            id: "width-3",
-            name: "numbers"
-          }) }}
-                            
-                                  
-        <br>
-<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="page4">Continue</a>
-
-<a href="page2filtered" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
-
-</form>
-</div>
-</div>
-</article>
-
-
-
-
-
-
+    
+              
+    <article class="fiu-article">
+    
+    
+    
+    
+        <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
+            <h1 class="govuk-heading-l">How many positions would you have available for this apprenticeship?</h1>
+            <form action="page3a" method="post" class="form">
+                <div class="govuk-form-group">
+            <h3 class="govuk-heading-m"> Business administrator (level 3)  </h3>
+                      <p class="govuk-body-s"> Supporting and engaging with different parts of the organisation and interact with internal or external customers.</p>
+                      <p class="govuk-body-s govuk-!-margin-bottom-6">
+                        Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/business-administrator-v1-0" target="_blank" rel="external">Business administrator (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                    </p>
+       
+   
+                <h1 class="govuk-label-wrapper">
+                  <label class="govuk-label govuk-label--m" for="registration-number">
+                    What is your vehicle registration number?
+                  </label>
+                </h1>
+                <input class="govuk-input" id="registration-number" name="vehicle-registration" value="{{ data['vehicle-registration'] }}" type="text">
+              </div>
+                                
+                                      
+            <br>
+    <div class="govuk-button-group"><a class="fiu-button fiu-button--employers">Continue</a>
+    
+    <a href="page2filtered" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
+    
+    </form>
     </div>
+    </div>
+    </article>
+    
+    
+    
+    
+    
+    
+        </div>
+    
 
 
-
-
-<div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-one-third">
             
       
+        
+                    <div class="fiu-panel fiu-panel--narrow-col" style="padding-left: 20px; padding-right:20px;  padding-bottom: 10px;">
+            <h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Improve your service</h2>
+            <p class="govuk-body-m"  style="text-align: left;">Apprentices can have a positive impact on your workforce, by creating an environment for innovative ideas to help develop your business.
+               <br><br> In a survey commissioned by the government in 2017, 74% of employers said apprenticeships helped them improve the quality of their product or service.</p>
+                <hr>
+                <br>
+                <p class="govuk-body-m"  style="text-align: left; font-style: italic;">“In an apprenticeship, they have to do everything that is a part of that standard, so it really encourages them to make sure they do all of the standard and become multi-skilled which obviously massively benefits.”
+            <br><strong style="font-size: 21px;">Robin Scherbatsky<br></strong>APPRENTICESHIP MANAGER,<br>METRO NEWS 1</p>
+          
+        </div>
 
 
-       
-<div class="fiu-panel fiu-panel--narrow-col" style="padding-left: 20px; padding-right:20px;  padding-bottom: 10px;">
-    <h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Additional support</h2>
+
+ 
+           <br>         
     
-<p class="govuk-body-m" style="text-align: left;">Additional support is available to employers who wish to train young or disadvantaged people. <br>Employers and training providers could get £1,000 each for taking on an apprentice who is either:
+</div>
 
-    <ul class="govuk-list govuk-list--bullet" style="text-align: left;">
-        <li>aged 16 to 18 years old,</li>
-        <li>or aged 19 to 25 years old and has an education, health and care (EHC) plan
-        </li>
-        <li>or has been in the care of their local authority</li>
-    
-    </ul>
-    </p>
-    <p class="govuk-body-m" style="text-align: left;">
-    You can recruit an apprentice while they are still at school but they will need to be 16 or over by the end of the summer holidays to start the apprenticeship.</p>
-    </div>
+
+
 
 
 </main>
 <br><br>
-{% endblock %}
+
     <footer class="fiu-footer">
         <div class="fiu-width-container">
             <div class="fiu-footer__apprenticeship-logo-wrap">
