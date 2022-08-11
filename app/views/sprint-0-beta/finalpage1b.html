@@ -440,101 +440,179 @@ position: relative;">
   }
   
 
+
+
+
+
+
             </style>
 
-    
-    
+<style>
+
+.row-minor {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+   
+}
+.info-box-green {
+  background-color: #cce2d8;
+    color:#00703c;
+    margin-right: 5px;
+   
+    padding-bottom:0;
+}
+.info-box {
+   padding-left:20px;
+   padding-right:20px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.info-box-yellow {
+  background-color: #fff7bf;
+  margin-left:5px;
+  color:#594d00;
+   
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.notbold {
+  font-weight: 400;
+    font-size: 18px;
+}
+
+.chapter-line-yellow {
+    background-color: #594d00;
+    height: 4px;
+    margin-top: 12px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.chapter-line-green {
+    background-color:#00703c;
+    height: 4px;
+    margin-top: 12px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.bignumber {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 2em;
+   
+}
+
+
+
+.galben {
+      color:#594d00;
+      background-color: #fff7bf;
+      font-weight: 400;
+    }
+
+    .verde {
+      color:#005a30;
+      background-color: #cce2d8;
+       font-weight: 400;
+
+    }
+
+</style>
+
   
             
             <div class="govuk-panel govuk-panel--confirmation" style="background-color:#4d43a3;">
                
 
                 <h1 class="govuk-panel__title" style="font-family: nobel,sans-serif;">
-         Funding and benefits calculation complete
+         Funding calculation complete
                         </h1>
                        
                     </div>
-
+                    <div class="row-minor column-on-mobile">
+                      <div class="column info-box info-box-green">
+                      <p class="bold">Total available funding</p>
+                      <div class="chapter-line chapter-line-green"></div>
+                      <p><span class="bignumber" id="personalInflation">£95,000</span></p>
+                      <p class="notbold">This is the total funding available to you.</p>
+                      </div><br>
+                      <div class="column info-box info-box-yellow">
+                        <p class="bold">Total training cost</p>
+                      <div class="chapter-line chapter-line-yellow"></div>
+                      <p><span id="increaseMonthlySpend" class="bignumber">£5,000</span></p>
+                      <p class="notbold">This is the total training cost paid by you.</p>
+                    </div>
+                    
+                      </div>
                   <br><br>
 
                     
                    
                     <div class="govuk-panel govuk-panel--confirmation" style="background-color:#fff; padding: 0;">
-                      <br>
-<table class="govuk-table">
-
-
-  <caption class="govuk-table__caption govuk-table__caption--m" style="font-family: nobel,sans-serif;">Funding and apprenticeship training cost breakdown</caption>
-
-  <thead class="govuk-table__head" style="margin-top:60px; font-family: nobel,sans-serif;">
-    <tr class="govuk-table__row">
-   
-      <th scope="col" class="govuk-table__header govuk-!-width-one-third" style="font-weight: 700; white-space:nowrap;">Number of apprenticeships</th>
-      <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-third" style="font-weight: 700;">Total training costs</th>
-      <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-third">Total available funding</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-
-    <tr class="govuk-table__row">
-     
-
-      <td class="govuk-table__cell">6</td>
-      <td class="govuk-table__cell dreapta">£100,000</td>
-      <td class="govuk-table__cell dreapta">£95,000</td>
-    </tr>
  
-  </tbody>
-</table>
 
-
-
-                      <br>
                       <table class="govuk-table">
    
        
-                        <caption class="govuk-table__caption govuk-table__caption--m" style="font-family: nobel,sans-serif;">Detailed funding and apprenticeship training cost breakdown</caption>
-        
+              
+                        <caption class="govuk-table__caption govuk-table__caption--m" style="font-family: nobel,sans-serif;">
+                          Detailed funding and apprenticeship training cost breakdown</caption>
                         <thead class="govuk-table__head" style="margin-top:60px; font-family: nobel,sans-serif;">
                           <tr class="govuk-table__row">
-                         
-                            <th scope="col" class="govuk-table__header govuk-!-width-one-third" style="font-weight: 700; white-space:nowrap;">Number of apprenticeships</th>
-                            <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-third" style="font-weight: 700;">Training costs</th>
-                            <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-third">Available funding</th>
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Apprenticeship</th>
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter dreapta">Roles available</th>
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter dreapta" style="font-weight: 700;">Available funding</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-!-width-one-quarter" style="font-weight: 700; padding-right:5px;">Training costs</th>
                           </tr>
                         </thead>
                         <tbody class="govuk-table__body">
-                      
+                   
                           <tr class="govuk-table__row">
-                           
-
-                            <td class="govuk-table__cell">Accountancy or taxation professional (level 7) x 3</td>
-                            <td class="govuk-table__cell dreapta">£30,000</td>
-                            <td class="govuk-table__cell dreapta">£28,500</td>
+                              
+                            <td class="govuk-table__cell">Business administrator (level 3)</td>
+                                
+                            <td class="govuk-table__cell dreapta">1</td>
+                            <td class="govuk-table__cell dreapta verde" >£28,500</td>
+                            <td class="govuk-table__cell dreapta galben" style="padding-right:5px;">£30,000</td>
                           </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Academic professional (level 7)</td>
+                            <td class="govuk-table__cell dreapta">2</td>
+                            <td class="govuk-table__cell dreapta verde">£40,000</td>
+                            <td class="govuk-table__cell dreapta galben" style="padding-right:5px;">£38,000</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Accountancy or taxation professional (level 7)</td>
+                            <td class="govuk-table__cell dreapta">3</td>
+                            <td class="govuk-table__cell dreapta verde">£28,500</td>
+                            <td class="govuk-table__cell dreapta galben" style="padding-right:5px;">£30,000</td>
+                          </tr>
+                          <tr class="govuk-table__row">
                          
-                          <tr class="govuk-table__row">
-                           
-
-                            <td class="govuk-table__cell">Academic professional <br>(level 7) x 2</td>
-                            <td class="govuk-table__cell dreapta">£40,000</td>
-                            <td class="govuk-table__cell dreapta">£38,000</td>
-                          </tr>
-                            
-                          <tr class="govuk-table__row">
-                           
-
-                            <td class="govuk-table__cell">Business administrator <br>(level 3) x 1</td>
-                            <td class="govuk-table__cell dreapta">£30,000</td>
-                            <td class="govuk-table__cell dreapta">£28,500</td>
-                          </tr>
                         </tbody>
                       </table>
+
+                      <br>
+                 
 
   
 <br>
 
-<br>
+
 <p class="govuk-body-m" style=" text-align: left;">All calculations are based on: 
     <ul class="govuk-list govuk-list--bullet"  style=" text-align: left; ">
  
