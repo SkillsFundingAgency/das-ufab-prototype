@@ -173,32 +173,28 @@ div {
     
     
         <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
-            <h1 class="govuk-heading-l">How many positions would you have available for this apprenticeship?</h1>
-            <form action="page3a" method="post" class="form">
+            <h1 class="govuk-heading-l">How many roles do you have available for this apprenticeship?</h1>
+            <form action="page3a" method="post">
                 <div class="govuk-form-group">
             <h3 class="govuk-heading-m"> Business administrator (level 3)  </h3>
                       <p class="govuk-body-s"> Supporting and engaging with different parts of the organisation and interact with internal or external customers.</p>
                       <p class="govuk-body-s govuk-!-margin-bottom-6">
                         Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/business-administrator-v1-0" target="_blank" rel="external">Business administrator (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
                     </p>
-       
-   
-                <h1 class="govuk-label-wrapper">
-                  <label class="govuk-label govuk-label--m" for="registration-number">
-                    What is your vehicle registration number?
-                  </label>
-                </h1>
-                <input class="govuk-input" id="registration-number" name="vehicle-registration" value="{{ data['vehicle-registration'] }}" type="text">
-              </div>
+                       <label class="govuk-label" for="width-3">
+                          Enter the number of available roles
+                        </label>
+                        <input class="govuk-input govuk-input--width-3" id="width-3" name="roles" type="text">
+                      </div>
                                 
                                       
             <br>
-    <div class="govuk-button-group"><a class="fiu-button fiu-button--employers">Continue</a>
+    <a class="fiu-button fiu-button--employers" href="page3a">Continue</a>
     
     <a href="page2filtered" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
     
     </form>
-    </div>
+    
     </div>
     </article>
     
