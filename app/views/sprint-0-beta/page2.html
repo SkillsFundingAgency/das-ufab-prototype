@@ -9,7 +9,7 @@
    
 
 	<meta charset="utf-8">
-	<title>Funding and benefits calculator</title>
+	<title>Calculate your apprenticeship funding</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#0b0c0c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -177,13 +177,13 @@
                         <li class="govuk-breadcrumbs__list-item">
                             <a href="#" class="govuk-breadcrumbs__link">ARE THEY RIGHT FOR YOU?</a>
                         </li>
-                                <li class="govuk-breadcrumbs__list-item">Funding and benefits calculator</li>
+                                <li class="govuk-breadcrumbs__list-item">Calculate your apprenticeship funding</li>
                 </ol>
             </div>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds fiu-page-header__wrap">
                         <strong class="fiu-tag fiu-tag--employers fiu-page-header__tag fiu-feature-text">Employers</strong>
-                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Funding and benefits calculator</h1>
+                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Calculate your apprenticeship funding</h1>
                     <img class="fiu-page-header__hm-logo" src="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/hm-government-logo.svg" alt="HM Government logo">
                 </div>
             </div>
@@ -342,9 +342,11 @@ font-family: "nobel",sans-serif;
 #capt {
     margin-top:0;
     padding-top:0;
-    font-family: "nobel",sans-serif;
+    font-family: 'nobel',sans-serif;
+    font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: #0b0c0c;
 }
 </style>
           
@@ -368,7 +370,15 @@ position: relative;">
             
                                    
                                     <h2 class="govuk-heading-l">Which training course would you consider for your apprentice?</h2>
-                                    <span class="govuk-caption-l" id="capt">Choose from the drop down menu or enter a job role or keywords to narrow down your search </span>
+
+                                   
+
+
+                                    {%  if data['levytype'] == "Under £3 million" %}
+                                    <span class="govuk-caption-l" id="capt">Choose from the drop down menu or enter a job role or keywords to narrow down your search. You can add up to 10 apprenticeship training courses.</span>
+{% else %}
+<span class="govuk-caption-l" id="capt">Choose from the drop down menu or enter a job role or keywords to narrow down your search.</span>
+   {% endif %}
                                     <br>
                                     <div class="govuk-form-group">
                                        
@@ -539,7 +549,7 @@ position: relative;">
     <div class="govuk-grid-row govuk-!-margin-bottom-2">
         <div class="govuk-grid-column-two-thirds">
                 <p class="govuk-body"><strong>631 results</strong><br><br>
-                    Sorted by: <strong>Name</strong></p>
+                    Ordered by: <strong>Name</strong></p>
 
         </div>
         
@@ -586,8 +596,7 @@ position: relative;">
                     Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/abattoir-worker-v1-0" target="_blank" rel="external">Abattoir worker (level 2)</a> is available from the Institute for Apprenticeships and Technical Education.
                 </p>
 
-                <dl class="das-definition-list das-definition-list--meta das-search-results__meta" >
-             
+                <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
                     <dt class="das-definition-list__title">Apprenticeship category:</dt>
                     <dd class="das-definition-list__definition">Engineering and manufacturing</dd>
                 </dl>
@@ -645,7 +654,6 @@ position: relative;">
                         Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/accident-repair-technician-v1-0" target="_blank" rel="external">Accident repair technician (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
                     </p>
                     <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-             
                         <dt class="das-definition-list__title">Apprenticeship category:</dt>
                         <dd class="das-definition-list__definition">Engineering and manufacturing</dd>
                     </dl>
@@ -674,7 +682,7 @@ position: relative;">
                         Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/accountancy-or-taxation-professional-v1-0" target="_blank" rel="external">Accountancy or taxation professional (level 7)</a> is available from the Institute for Apprenticeships and Technical Education.
                     </p>
                     <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                        <dt class="das-definition-list__title">Apprenticeship category</dt>
+                        <dt class="das-definition-list__title">Apprenticeship category:</dt>
                         <dd class="das-definition-list__definition">Legal, finance and accounting</dd>
                     </dl>
                 </td>
@@ -704,11 +712,11 @@ position: relative;">
                     <p class="govuk-body-s govuk-!-margin-bottom-6">
                         Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/accounts-or-finance-assistant-v1-0" target="_blank" rel="external">Accounts or finance assistant (level 2)</a> is available from the Institute for Apprenticeships and Technical Education.
                     </p>
+                   
                     <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                        <dt class="das-definition-list__title">Apprenticeship category</dt>
+                        <dt class="das-definition-list__title">Apprenticeship category:</dt>
                         <dd class="das-definition-list__definition">Legal, finance and accounting</dd>
                     </dl>
-                
                 
                 
                 

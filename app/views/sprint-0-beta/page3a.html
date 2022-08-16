@@ -9,7 +9,7 @@
    
 
 	<meta charset="utf-8">
-	<title>Funding and benefits calculator</title>
+	<title>Calculate your apprenticeship funding</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#0b0c0c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -185,13 +185,13 @@
                         <li class="govuk-breadcrumbs__list-item">
                             <a href="#" class="govuk-breadcrumbs__link">ARE THEY RIGHT FOR YOU?</a>
                         </li>
-                                <li class="govuk-breadcrumbs__list-item">Funding and benefits calculator</li>
+                                <li class="govuk-breadcrumbs__list-item">Calculate your apprenticeship funding</li>
                 </ol>
             </div>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds fiu-page-header__wrap">
                         <strong class="fiu-tag fiu-tag--employers fiu-page-header__tag fiu-feature-text">Employers</strong>
-                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Funding and benefits calculator</h1>
+                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Calculate your apprenticeship funding</h1>
                     <img class="fiu-page-header__hm-logo" src="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/hm-government-logo.svg" alt="HM Government logo">
                 </div>
             </div>
@@ -215,37 +215,41 @@
 <article class="fiu-article">
 
 
+    <form action="page4" method="post">
 
 
     <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
-        <h1 class="govuk-heading-l">You have added the following apprenticeships</h1>
+    
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--l" style="font-family: nobel,sans-serif;
+            font-weight: 700;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;">You have added the following apprenticeships</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Apprenticeship training course</th>
+                <th scope="col" class="govuk-table__header govuk-table__header">Roles available</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"> Business administrator (level 3)</th>
+                <td class="govuk-table__cell govuk-table__cell">3</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"> <a class="govuk-link--no-visited-state" href="page3"><span aria-hidden="true" style="font-family: nobel,sans-serif;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale; color:#1d70b8; text-decoration: underline;
+                    text-decoration-color: #1d70b8;">Change</span><span class="govuk-visually-hidden">Change apprenticeship details</span></a><br><br>
+                     <a class="govuk-link--no-visited-state" href="#"><span aria-hidden="true" style="font-family: nobel,sans-serif;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale; color:#1d70b8;
+                        text-decoration: underline; text-decoration-color: #1d70b8;">Remove</span><span class="govuk-visually-hidden">Remove Jeremy Winter from the list</span></a></td>
+              </tr>
+             
+            </tbody>
+          </table>
 
 
-        <form action="page4" method="post">
-        <div class="govuk-form-group">
-        
-          <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--short">
-           
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
-                3x Business administrator (level 3)
-              </dt>
-              <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
-                <ul class="govuk-summary-list__actions-list">
-                  <li class="govuk-summary-list__actions-list-item">
-                    <a class="govuk-link--no-visited-state" href="page3"><span aria-hidden="true" style="color:#1d70b8; text-decoration: underline;
-                        text-decoration-color: #1d70b8;">Change</span><span class="govuk-visually-hidden">Change apprenticeship details</span></a>
-                  </li>
-                  <li class="govuk-summary-list__actions-list-item">
-                    <a class="govuk-link--no-visited-state" href="#"><span aria-hidden="true" style="color:#1d70b8;
-                       text-decoration: underline; text-decoration-color: #1d70b8;">Remove</span><span class="govuk-visually-hidden">Remove Jeremy Winter from the list</span></a>
-                  </li>
-                </ul>
-              </dd>
-            </div>
-          </dl>
-        
-        </div>
        
     
         
@@ -254,20 +258,36 @@
               <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
                Would you like to add any more apprenticeships?
               </legend>
+
+
+           
+
+
+              {%  if data['levytype'] == "Under £3 million" %}
               <div id="add-another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
-              font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased;">
-                You can add as many as you want.
+              font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased; color: #0b0c0c;">
+               As a non-levy employer you can only add up to 10.
               </div>
+                 
+                
+  {% else %}
+  <div id="add-another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
+  font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased; color: #0b0c0c;">
+    You can add as many as you want.
+  </div>
+  {% endif %}
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
-                  <label class="govuk-label govuk-radios__label" for="add-another">
+                  <label class="govuk-label govuk-radios__label" for="add-another" style="font-family: nobel,sans-serif;
+                  font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
-                  <label class="govuk-label govuk-radios__label" for="add-another-2">
+                  <label class="govuk-label govuk-radios__label" for="add-another-2" style="font-family: nobel,sans-serif;
+                  font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
                     No
                   </label>
                 </div>

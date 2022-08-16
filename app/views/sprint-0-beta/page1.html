@@ -9,7 +9,7 @@
    
 
 	<meta charset="utf-8">
-	<title>Funding and benefits calculator</title>
+	<title> Calculate your apprenticeship funding</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#0b0c0c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -146,13 +146,13 @@ div {
                         <li class="govuk-breadcrumbs__list-item">
                             <a href="#" class="govuk-breadcrumbs__link">ARE THEY RIGHT FOR YOU?</a>
                         </li>
-                                <li class="govuk-breadcrumbs__list-item">Funding and benefits calculator</li>
+                                <li class="govuk-breadcrumbs__list-item">Calculate your apprenticeship funding</li>
                 </ol>
             </div>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds fiu-page-header__wrap">
                         <strong class="fiu-tag fiu-tag--employers fiu-page-header__tag fiu-feature-text">Employers</strong>
-                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Funding and benefits calculator</h1>
+                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Calculate your apprenticeship funding</h1>
                     <img class="fiu-page-header__hm-logo" src="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/hm-government-logo.svg" alt="HM Government logo">
                 </div>
             </div>
@@ -196,7 +196,22 @@ position: relative;">
             
                                    
                                     <h2 class="govuk-heading-l">What is your annual pay bill?</h2>
-                                    
+                                    <details class="govuk-details" data-module="govuk-details">
+                                        <summary class="govuk-details__summary">
+                                          <span class="govuk-details__summary-text">
+                                            What is Co-investment?
+                                          </span>
+                                        </summary>
+                                        <div class="govuk-details__text" style="font-family: nobel,sans-serif;
+                                        font-weight: 300;
+                                        font-style: normal;
+                                        -webkit-font-smoothing: antialiased;
+                                        -moz-osx-font-smoothing: grayscale;
+                                        color: #0b0c0c;
+                                        position: relative;">
+                                            Co-investment is when employers share the cost of training and assessing apprentices with the government.
+                                        </div>
+                                      </details>
                                     <form method="post">
                                     <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
@@ -204,31 +219,23 @@ position: relative;">
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="levytype-nonlevy" name="levytype" type="radio" value="Under £3 million" {{ checked("levytype", "Under £3 million") }} data-aria-controls="conditional-levytype-nonlevy">
-        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="levytype-nonlevy">Under £3 million
+        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif; font-weight: 400;"   for="levytype-nonlevy">Under £3 million
         </label>
         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-levytype-nonlevy">
             <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint" style="font-family: nobel,sans-serif;
-            font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased;">
-              You qualify for Co-investment (95% paid by DFE).<br>
-              Co-investment is when employers share the cost of training and assessing apprentices with the government.
+            font-weight: 300;  color: #0b0c0c; font-style: normal; -webkit-font-smoothing: antialiased;">
+            You qualify for Co-investment, that means 95% of your training costs are paid by DFE.<br>
               </div>
         </div>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="levytype-levy" name="levytype" type="radio" value="Over £3 million" {{ checked("levytype", "Over £3 million") }} data-aria-controls="conditional-levytype-levy">
-        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="levytype-levy">Over £3 million
+        <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif; font-weight: 400;"   for="levytype-levy">Over £3 million
         </label>
         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-levytype-levy"> <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint" style="font-family: nobel,sans-serif;
-            font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased;">
-             As an employer with a pay bill of more than £3 million, you’re required to pay the apprenticeship levy. You can manage funds using the apprenticeship service and spend it on training and assessing your apprentices.
-<br><br>
-             The government will apply a 10% top up to the funds you have in your account.
-             <br><br>
-             If you don’t have enough funds, you just pay 5% of the outstanding balance and the government will pay the rest. This is up to the funding band maximum allocated to each specific apprenticeship.
-             <br><br>
-             For apprentices that started before 1 April 2019, you need to contribute 10%.
-             <br><br>
-             If you exceed the funding band maximum, you’ll need to pay all the additional costs.
+            font-weight: 300;color: #0b0c0c; font-style: normal; -webkit-font-smoothing: antialiased;">
+            You are required to pay 5% of your payroll each month as a levy tax to support apprenticeships.
+
               </div></div>
       </div>
      
@@ -264,10 +271,13 @@ position: relative;">
       
         
                     <div class="fiu-panel fiu-panel--narrow-col" style="padding-left: 20px; padding-right:20px;  padding-bottom: 10px;">
-            <h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Make the most of government funding</h2>
-            <p class="govuk-body-m" style="text-align: left;">If your pay bill is over £3 million, you are required to pay 0.5% of your payroll each month as a levy tax to support apprenticeships.<br>You’ll receive funds to spend on training and assessing your apprentices. The government will add 10%.<br><br>
-                If your pay bill is under £3 million, you pay 5% towards the cost of training and assessing your apprentice and the government will pay the rest (95%) up to the funding band maximum.
-                
+            <h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Using your apprenticeship levy</h2>
+            <p class="govuk-body-m" style="text-align: left;">As an employer with a pay bill of more than £3 million you can manage funds using the apprenticeship service and spend it on training and assessing your apprentices.<br>
+                The government will apply a 10% top up to the funds you have in your account.<br><br>
+                If you don’t have enough funds, you just pay 5% of the outstanding balance and the government will pay the rest. This is up to the funding band maximum allocated to each specific apprenticeship.
+                <br><br>
+                If you exceed the funding band maximum, you’ll need to pay all the additional costs.
+                If you don’t already have an account, find out <a class="govuk-link--no-visited-state" target="_blank" href="https://www.apprenticeships.gov.uk/employers/create-apprenticeship-service-account" >how to set up an apprenticeship service account as an employer.</a>
         </p>
         <hr>
         <br>
