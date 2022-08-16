@@ -204,176 +204,86 @@
 <div class="fiu-width-container">
 
 <div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
         
-   
-
-          
-<article class="fiu-article">
-
-
-
-
-    <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
-                                    <h1 class="govuk-heading-l">Check your answers</h1>
-
-                                    <h2 class="govuk-heading-m">Your organisation details</h2>
-                            
-                                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                           
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                            Organisation size
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                            {{ data['orgsize'] }}
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page1">
-                                            Change<span class="govuk-visually-hidden"> name</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                            Annual pay bill
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                            {{ data['levytype'] }}
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page1b">
-                                            Change<span class="govuk-visually-hidden"> name</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                          Industry
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                           {{ data['input-autocomplete'] }}    
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page2">
-                                            Change<span class="govuk-visually-hidden"> date of birth</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                     
-                                    </dl>
-                            
-                                    <h2 class="govuk-heading-m">Your potential hire details</h2>
-                            
-                                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                          Apprenticeship training course
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                            
-                                            {{ data['selectedcourse'] }}
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page3">
-                                            Change<span class="govuk-visually-hidden"> previous application number</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                         Apprentice wage
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                           
-                                           {% if data['appwagess'] %}
-                                           £{{ data['appwagess'] }} yearly
-                                         {% else %}
-                                         £{{ data['appwagez'] }} hourly
-                                         {% endif %}
-
-                                         
-                            
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page4">
-                                            Change<span class="govuk-visually-hidden"> home address</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                         Non-apprentice wage
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                            {% if data['nonappwagess'] %}
-                                            £{{ data['nonappwagess'] }} yearly
-                                         {% else %}
-                                         £{{ data['nonappwagezz'] }} hourly 
-                                         {% endif %}
-                                           
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link--no-visited-state" href="page5">
-                                            Change<span class="govuk-visually-hidden"> home address</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                    
-                                     
-                                    </dl>
-                            
-                                  
-        <br>
-<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="finalpage1b">Calculate ROI</a>
-
-<a href="page5" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
-</div>
-</div>
-</article>
-
-
-
-
-
-
-    </div>
-
-
-
-
-<div class="govuk-grid-column-one-third">
+        <style>
+            .govuk-link--no-visited-state:visited {
+            color: #1d70b8;
+        }
+        </style>
+                  
+        <article class="fiu-article">
+        
+        
+            <form action="page4" method="post">
+        
+        
+            <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
             
-      
+                
         
-    <div class="fiu-panel fiu-panel--narrow-col" style="padding-left: 20px; padding-right:20px;  padding-bottom: 10px;">
-<h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Diversity within your workforce</h2>
-<div class="imgbox"> <img class="" src='/public/images/susan.jpeg'></div><br>
-<p class="govuk-body-m"  style="text-align: left; font-style: italic;">"We are the department for realising potential. By recognising the profound power in diversity and difference, we will go further and do more to be a place where people from all backgrounds can thrive.This is important because diverse organisations make better decisions, and that in turn means we can do better for the children and learners we serve".
-    <br><strong style="font-size: 21px;">Susan Ackland Hood<br></strong>PERMANENT SECRETARY, DEPARTMENT FOR EDUCATION</p>
+        
+               
+            
+                
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--l">
+                      Are you sure you want to remove this apprenticeship training course?
+                      </legend>
+        
+        
+                   
+        
+        
+                      <div class="govuk-inset-text">
+                        <h3 class="govuk-heading-m"> Business administrator (level 3)  </h3>
+                        <p class="govuk-body-s"> Supporting and engaging with different parts of the organisation and interact with internal or external customers.</p>
+                      </div>
+                    
+                        
+          
+                      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+                          <label class="govuk-label govuk-radios__label" for="add-another" style="font-family: nobel,sans-serif;
+                          font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+                          <label class="govuk-label govuk-radios__label" for="add-another-2" style="font-family: nobel,sans-serif;
+                          font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                
+                    </fieldset>
+                  </div>
+             
+                                    
+                                          
+                <br>
+        <a class="fiu-button fiu-button--employers" href="page4">Continue</a>
+        
+        <a href="page3" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
+        </div>
+        </form> 
+        
+        
+        </article>
+        
+        
+        
+        
+        
+        
+            </div>
 
 
 
-</div>
-
-
-       
-<div class="fiu-panel fiu-panel--narrow-col" style="padding-left: 20px; padding-right:20px;  padding-bottom: 10px;">
-    <h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Additional support</h2>
-    
-<p class="govuk-body-m" style="text-align: left;">Additional support is available to employers who wish to train young or disadvantaged people. <br>Employers and training providers could get £1,000 each for taking on an apprentice who is either:
-
-    <ul class="govuk-list govuk-list--bullet" style="text-align: left;">
-        <li>aged 16 to 18 years old,</li>
-        <li>or aged 19 to 25 years old and has an education, health and care (EHC) plan
-        </li>
-        <li>or has been in the care of their local authority</li>
-    
-    </ul>
-    </p>
-    <p class="govuk-body-m" style="text-align: left;">
-    You can recruit an apprentice while they are still at school but they will need to be 16 or over by the end of the summer holidays to start the apprenticeship.</p>
-    </div>
 
 
 </main>
