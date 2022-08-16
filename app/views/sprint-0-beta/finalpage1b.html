@@ -200,7 +200,11 @@ div {
 <div class="fiu-width-container">
 
 <div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
+
+
+
+
+<div class="govuk-grid-column-two-thirds" id="printableArea">
         
    
 
@@ -635,9 +639,18 @@ position: relative;">
 
   
       <div class="govuk-button-group">
-        <a href="startpage" class="fiu-button fiu-button--employers fiu-button--outlined fiu-panel__button">Start a new calculation<span class="fiu-vh"> (Opens in a new window)</span></a>
+        <a href="startpage" class="fiu-button fiu-button--employers fiu-button--outlined fiu-panel__button" onclick="printDiv('printableArea')" >Print<span class="fiu-vh"> (Opens in a new window)</span></a>
       
        
+        <a class="govuk-link" style="color: #4282ba; font-size: 19px;
+        font-family: nobel,sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-decoration: underline;
+        text-decoration-thickness: max(1px, 0.0625rem);
+        text-underline-offset: 0.1em;" href="startpage">Start a new calculation</a>
       </div>
    
 
@@ -771,3 +784,17 @@ position: relative;">
 
 
 
+<script>
+  
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+
+</script>
