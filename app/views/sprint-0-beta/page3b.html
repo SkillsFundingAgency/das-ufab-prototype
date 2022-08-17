@@ -215,7 +215,7 @@
         <article class="fiu-article">
         
         
-            <form action="page2" method="post">
+            <form  method="post">
         
         
             <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
@@ -236,24 +236,24 @@
                    
         
         
-                      <div class="govuk-inset-text">
-                        <h3 class="govuk-heading-m"> Business administrator (level 3)  </h3>
+                    
+                        <h3 class="govuk-heading-m">{{ data['selectedcourse'] }} </h3>
                         <p class="govuk-body-s"> Supporting and engaging with different parts of the organisation and interact with internal or external customers.</p>
-                      </div>
+               
                     
                         
           
                       <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
-                          <label class="govuk-label govuk-radios__label" for="add-another" style="font-family: nobel,sans-serif;
+                          <input class="govuk-radios__input" id="remove1" name="remove" type="radio" value="Yes">
+                          <label class="govuk-label govuk-radios__label" for="remove1" style="font-family: nobel,sans-serif;
                           font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
                             Yes
                           </label>
                         </div>
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
-                          <label class="govuk-label govuk-radios__label" for="add-another-2" style="font-family: nobel,sans-serif;
+                          <input class="govuk-radios__input" id="remove2" name="remove" type="radio" value="No">
+                          <label class="govuk-label govuk-radios__label" for="remove2" style="font-family: nobel,sans-serif;
                           font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
                             No
                           </label>

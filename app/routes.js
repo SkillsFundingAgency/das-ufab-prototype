@@ -24,3 +24,27 @@ router.post('/sprint-0-beta/page1', function (req, res) {
 
     //end
 })
+
+
+
+
+
+
+// Re-direct from multiple  radios 
+router.post('/sprint-0-beta/page3b', function (req, res) {
+
+    let remove = req.session.data['remove']
+
+    console.log(req.session.data['remove'])
+
+    //Option 1
+    if (remove === 'Yes') {
+        res.redirect('/sprint-0-beta/page2')
+    }
+    //Option 2
+    else if (remove === 'No') {
+        res.redirect('/sprint-0-beta/page3a')
+    }
+
+    //end
+})
