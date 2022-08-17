@@ -550,16 +550,16 @@ position: relative;">
                     </div>
                     <div class="row-minor column-on-mobile">
                       <div class="column info-box info-box-green">
-                      <p class="bold">Total available funding</p>
+                      <p class="bold">Total funding available to you</p>
                       <div class="chapter-line chapter-line-green"></div>
-                      <p><span class="bignumber" id="personalInflation">£95,000</span></p>
-                      <p class="notbold">This is the total funding available to you.</p>
+                      <p><span class="bignumber" id="personalInflation">£28,500</span></p>
+                    
                       </div><br>
                       <div class="column info-box info-box-yellow">
-                        <p class="bold">Total training cost</p>
+                        <p class="bold">Total training cost paid by you</p>
                       <div class="chapter-line chapter-line-yellow"></div>
-                      <p><span id="increaseMonthlySpend" class="bignumber">£5,000</span></p>
-                      <p class="notbold">This is the total training cost paid by you.</p>
+                      <p><span id="increaseMonthlySpend" class="bignumber">£1,500</span></p>
+                     
                     </div>
                     
                       </div>
@@ -588,25 +588,13 @@ position: relative;">
                    
                           <tr class="govuk-table__row">
                               
-                            <td class="govuk-table__cell">Business administrator (level 3)</td>
+                            <td class="govuk-table__cell">{{ data['selectedcourse'] }}</td>
                                 
-                            <td class="govuk-table__cell dreapta">1</td>
+                            <td class="govuk-table__cell dreapta">{{ data['roles'] }}  </td>
                             <td class="govuk-table__cell dreapta verde" >£28,500</td>
-                            <td class="govuk-table__cell dreapta galben" style="padding-right:5px;">£30,000</td>
+                            <td class="govuk-table__cell dreapta galben" style="padding-right:5px;">£1,500</td>
                           </tr>
-                          <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">Academic professional (level 7)</td>
-                            <td class="govuk-table__cell dreapta">2</td>
-                            <td class="govuk-table__cell dreapta verde">£40,000</td>
-                            <td class="govuk-table__cell dreapta galben" style="padding-right:5px;">£38,000</td>
-                          </tr>
-                          <tr class="govuk-table__row">
-                            <td class="govuk-table__cell">Accountancy or taxation professional (level 7)</td>
-                            <td class="govuk-table__cell dreapta">3</td>
-                            <td class="govuk-table__cell dreapta verde">£28,500</td>
-                            <td class="govuk-table__cell dreapta galben" style="padding-right:5px;">£30,000</td>
-                          </tr>
-                          <tr class="govuk-table__row">
+                       
                          
                         </tbody>
                       </table>

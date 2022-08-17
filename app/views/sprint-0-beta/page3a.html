@@ -234,8 +234,8 @@
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-table__cell">Business administrator (level 3)</td>
-                <td class="govuk-table__cell govuk-table__cell">3</td>
+                <td class="govuk-table__cell govuk-table__cell">{{ data['selectedcourse'] }}  </td>
+                <td class="govuk-table__cell govuk-table__cell">{{ data['roles'] }}</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric"> <a class="govuk-link--no-visited-state" href="page2filtered"><span aria-hidden="true" style="font-family: nobel,sans-serif;
                     -webkit-font-smoothing: antialiased;
                     -moz-osx-font-smoothing: grayscale; color:#1d70b8; text-decoration: underline;
@@ -253,53 +253,72 @@
        
     
         
-        <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
-               Would you like to add any more apprenticeships?
-              </legend>
+   
+           
 
 
            
 
 
-              {%  if data['levytype'] == "Under £3 million" %}
+              {%  if data['levytype'] == "Over £3 million" %}
+              <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+                 Would you like to add any more apprenticeships?
+                </legend>
               <div id="add-another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
               font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased; color: #0b0c0c;">
-               As a non-levy employer you can only add up to 10.
+              You can add as many as you want.  
               </div>
                  
                 
   {% else %}
-  <div id="add-another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
-  font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased; color: #0b0c0c;">
-    You can add as many as you want.
-  </div>
+
   {% endif %}
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
-                  <label class="govuk-label govuk-radios__label" for="add-another" style="font-family: nobel,sans-serif;
-                  font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
-                  <label class="govuk-label govuk-radios__label" for="add-another-2" style="font-family: nobel,sans-serif;
-                  font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
-                    No
-                  </label>
-                </div>
-              </div>
-        
-            </fieldset>
-          </div>
+
+
+
+  {%  if (data['levytype'] == "Under £3 million") and (data['roles'] == 10) or (data['roles'] > 10) %}
+
+    
+{% else %}
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
+       Would you like to add any more apprenticeships?
+      </legend>
+<div id="add-another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
+font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased; color: #0b0c0c;">
+ As a non-levy employer you can only add up to 10.
+</div>
+<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+    <label class="govuk-label govuk-radios__label" for="add-another" style="font-family: nobel,sans-serif;
+    font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
+      Yes
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+    <label class="govuk-label govuk-radios__label" for="add-another-2" style="font-family: nobel,sans-serif;
+    font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
+      No
+    </label>
+  </div>
+</div>
+
+</fieldset>
+</div>
+{% endif %}
+
+
+
      
                             
                                   
         <br>
-<a class="fiu-button fiu-button--employers" href="page4">Continue</a>
+        <button class="fiu-button fiu-button--employers" style="margin-right:10px;">Continue</button>
 
 <a href="page3" class="fiu-button fiu-button--employers fiu-button--outlined">Return to previous page</a>
 </div>

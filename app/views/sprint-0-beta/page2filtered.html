@@ -372,11 +372,9 @@ position: relative;">
                                    
                                     <h2 class="govuk-heading-l">Which training course would you consider for your apprentice?</h2>
                                
-                                    {%  if data['levytype'] == "Under £3 million" %}
-                                    <span class="govuk-caption-l" id="capt">Choose from the drop down menu or enter a job role or keywords to narrow down your search. You can add up to 10 apprenticeship training courses.</span>
-{% else %}
+                                  
 <span class="govuk-caption-l" id="capt">Choose from the drop down menu or enter a job role or keywords to narrow down your search.</span>
-   {% endif %}
+
    <br>
                                     <div class="govuk-form-group">
 
@@ -606,7 +604,7 @@ position: relative;">
                 
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation" >
                     <div class="govuk-radios__item mijloc" style="margin-left:10px; padding-left: 0;">
-                        <input class="govuk-radios__input" id="selectedcourse-bus" name="selectedcourse" type="radio" value="Business administrator (level 3)" {{ checked("selectedcourse", "Business administrator (level 3)") }}>
+                        <input class="govuk-radios__input" id="selectedcourse-bus" name="selectedcourse" type="radio" value="Business administrator" {{ checked("selectedcourse", "Business administrator") }}>
         <label class="govuk-label govuk-radios__label"  style="font-family: nobel,sans-serif;"   for="selectedcourse-bus">
                          
                         </label>
