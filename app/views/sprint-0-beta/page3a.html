@@ -243,7 +243,7 @@
                      <a class="govuk-link--no-visited-state" href="page3b"><span aria-hidden="true" style="font-family: nobel,sans-serif;
                         -webkit-font-smoothing: antialiased;
                         -moz-osx-font-smoothing: grayscale; color:#1d70b8;
-                        text-decoration: underline; text-decoration-color: #1d70b8;">Remove</span><span class="govuk-visually-hidden">Remove Business administrator (level 3) from the list</span></a></td>
+                        text-decoration: underline; text-decoration-color: #1d70b8;">Remove</span><span class="govuk-visually-hidden">Remove {{ data['selectedcourse'] }}  from the list</span></a></td>
               </tr>
              
             </tbody>
@@ -262,11 +262,11 @@
 
               {%  if data['levytype'] == "Over £3 million" %}
               <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+              <fieldset class="govuk-fieldset" aria-describedby="another-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
                  Would you like to add any more apprenticeships?
                 </legend>
-              <div id="add-another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
+              <div id="another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
               font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased; color: #0b0c0c;">
               You can add as many as you want.  
               </div>
@@ -283,25 +283,25 @@
     
 {% else %}
 <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+    <fieldset class="govuk-fieldset" aria-describedby="another-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
        Would you like to add any more apprenticeships?
       </legend>
-<div id="add-another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
+<div id="another-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
 font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased; color: #0b0c0c;">
  As a non-levy employer you can only add up to 10.
 </div>
 <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
   <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
-    <label class="govuk-label govuk-radios__label" for="add-another" style="font-family: nobel,sans-serif;
+    <input class="govuk-radios__input" id="another" name="another" type="radio" value="Yes">
+    <label class="govuk-label govuk-radios__label" for="another" style="font-family: nobel,sans-serif;
     font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
       Yes
     </label>
   </div>
   <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
-    <label class="govuk-label govuk-radios__label" for="add-another-2" style="font-family: nobel,sans-serif;
+    <input class="govuk-radios__input" id="another-2" name="another" type="radio" value="No">
+    <label class="govuk-label govuk-radios__label" for="another-2" style="font-family: nobel,sans-serif;
     font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
       No
     </label>

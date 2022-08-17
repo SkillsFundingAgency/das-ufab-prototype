@@ -550,7 +550,7 @@ position: relative;">
                     </div>
                     <div class="row-minor column-on-mobile">
                       <div class="column info-box info-box-green">
-                      <p class="bold">Total government funding available</p>
+                      <p class="bold">Total government available funding</p>
                       <div class="chapter-line chapter-line-green"></div>
                       <p><span class="bignumber" id="personalInflation">£50,000</span></p>
                     
@@ -606,19 +606,36 @@ position: relative;">
 <br>
 
 
+{%  if data['levytype'] == "Over £3 million" %}
 <p class="govuk-body-m" style=" text-align: left;">All calculations are based on: 
-    <ul class="govuk-list govuk-list--bullet"  style=" text-align: left; ">
- 
-        <li>Maximum funding band for apprenticeship standard</li>
+  <ul class="govuk-list govuk-list--bullet"  style=" text-align: left; ">
 
-        <li>For pay bill over £3 million, we assume Levy funded</li>
-        <li>For pay bill under £3 million, we assume they pay 5%</li>
-        <li>Any additional costs to the Employer are not included</li>
-        
-       
-    </ul>
- </p>  
-    
+      <li>Maximum funding band for apprenticeship standard</li>
+      <li>For pay bill over £3 million, we assume Levy funded</li>
+      <li>Any additional costs to the Employer are not included</li>
+      
+     
+  </ul>
+</p>  
+  
+  
+{% else %}
+
+<p class="govuk-body-m" style=" text-align: left;">All calculations are based on: 
+  <ul class="govuk-list govuk-list--bullet"  style=" text-align: left; ">
+
+      <li>Maximum funding band for apprenticeship standard</li>
+      <li>For pay bill under £3 million, we assume they pay 5%</li>
+      <li>Any additional costs to the Employer are not included</li>
+      
+     
+  </ul>
+</p>  
+  
+
+{% endif %}
+
+
                 </div>
       
 <br>
