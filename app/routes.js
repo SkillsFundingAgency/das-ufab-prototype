@@ -51,3 +51,69 @@ router.post('/sprint-0-beta/page3b', function (req, res) {
 
 
 
+
+
+
+// Re-direct from multiple  radios 
+router.post('/sprint-0-beta/page3a', function (req, res) {
+
+    let levytype = req.session.data['levytype']
+
+    console.log(req.session.data['levytype'])
+
+    //Option 1
+    if (levytype === 'Under £3 million') {
+        res.redirect('/sprint-0-beta/page3nonlevy')
+    }
+    //Option 2
+    else if (levytype === 'Over £3 million') {
+        res.redirect('/sprint-0-beta/page3levy')
+    }
+
+    //end
+})
+
+
+
+
+
+// Re-direct from multiple  radios 
+router.post('/sprint-0-beta/page3levy', function (req, res) {
+
+    let another = req.session.data['another']
+
+    console.log(req.session.data['another'])
+
+    //Option 1
+    if (another === 'Yes') {
+        res.redirect('/sprint-0-beta/page2')
+    }
+    //Option 2
+    else if (another === 'No') {
+        res.redirect('/sprint-0-beta/page4')
+    }
+
+    //end
+})
+
+
+
+// Re-direct from multiple  radios 
+router.post('/sprint-0-beta/page3nonlevy', function (req, res) {
+
+    let anothers = req.session.data['anothers']
+
+    console.log(req.session.data['anothers'])
+
+    //Option 1
+    if (anothers === 'Yes') {
+        res.redirect('/sprint-0-beta/page2')
+    }
+    //Option 2
+    else if (anothers === 'No') {
+        res.redirect('/sprint-0-beta/page4')
+    }
+
+    //end
+})
+
