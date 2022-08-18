@@ -238,7 +238,53 @@
         
                     
                         <h3 class="govuk-heading-m">{{ data['selectedcourse'] }} </h3>
-                        <p class="govuk-body-s"> Supporting and engaging with different parts of the organisation and interact with internal or external customers.</p>
+    
+                        {%  if (data['selectedcourse'] == "Business administrator") %}
+            
+            
+            
+                                  <p class="govuk-body-s"> Supporting and engaging with different parts of the organisation and interact with internal or external customers.</p>
+                                  <p class="govuk-body-s govuk-!-margin-bottom-6">
+                                    Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/business-administrator-v1-0" target="_blank" rel="external">Business administrator (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                                </p>
+            
+            
+                        {%  elif (data['selectedcourse'] == "HR support") %}
+            
+            
+            
+            
+            
+                        <p class="govuk-body-s"> Handling day to day queries and providing human resources advice ranging from recruitment through to retirement.</p>
+                        <p class="govuk-body-s govuk-!-margin-bottom-6">
+                            Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/hr-support-v1-1" target="_blank" rel="external">HR support (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                      </p>
+            
+            
+                        {%  elif (data['selectedcourse'] == "Improvement technician") %}
+            
+                        <p class="govuk-body-s">Responsible for delivery and coaching of improvement activity within an area of responsibility.</p>
+                        <p class="govuk-body-s govuk-!-margin-bottom-6">
+                            Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/improvement-technician-v1-0" target="_blank" rel="external">Improvement technician (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                      </p>
+            
+                       {%  elif (data['selectedcourse'] == "Learning and development practitioner") %}
+            
+            
+                       <p class="govuk-body-s">Identifying, creating and delivering appropriate training needs.</p>
+                       <p class="govuk-body-s govuk-!-margin-bottom-6">
+                        Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/learning-and-development-practitioner-v1-0" target="_blank" rel="external">Learning and development practitioner (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                     </p>
+            
+                     {%  elif (data['selectedcourse'] == "Leisure duty manager") %}
+            
+                     <p class="govuk-body-s">Managing the day to day operation of a leisure facility.</p>
+                     <p class="govuk-body-s govuk-!-margin-bottom-6">
+                        Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/leisure-duty-manager-v1-1" target="_blank" rel="external">Leisure duty manager (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                   </p>
+            
+            
+                   {% endif %}
                
                     
                         
