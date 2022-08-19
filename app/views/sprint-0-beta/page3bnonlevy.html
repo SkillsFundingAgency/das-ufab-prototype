@@ -9,7 +9,7 @@
    
 
 	<meta charset="utf-8">
-	<title>Calculate your apprenticeship funding</title>
+	<title>Funding and benefits calculator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#0b0c0c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -185,13 +185,13 @@
                         <li class="govuk-breadcrumbs__list-item">
                             <a href="#" class="govuk-breadcrumbs__link">ARE THEY RIGHT FOR YOU?</a>
                         </li>
-                                <li class="govuk-breadcrumbs__list-item">Calculate your apprenticeship funding</li>
+                                <li class="govuk-breadcrumbs__list-item">Funding and benefits calculator</li>
                 </ol>
             </div>
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds fiu-page-header__wrap">
                         <strong class="fiu-tag fiu-tag--employers fiu-page-header__tag fiu-feature-text">Employers</strong>
-                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Calculate your apprenticeship funding</h1>
+                        <h1 class="govuk-heading-xl fiu-page-heading__title ">Funding and benefits calculator</h1>
                     <img class="fiu-page-header__hm-logo" src="https://das-prd-frnt-end.azureedge.net/fiu/assets/images/hm-government-logo.svg" alt="HM Government logo">
                 </div>
             </div>
@@ -204,171 +204,131 @@
 <div class="fiu-width-container">
 
 <div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
         
-<style>
-    .govuk-link--no-visited-state:visited {
-    color: #1d70b8;
-}
-</style>
-          
-<article class="fiu-article">
-
-
-    <form method="post">
-
-
-    <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
-    
-        <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--l" style="font-family: nobel,sans-serif;
-            font-weight: 700;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;">You have selected the following apprenticeship training courses<br>
+        <style>
+            .govuk-link--no-visited-state:visited {
+            color: #1d70b8;
+        }
+        </style>
+                  
+        <article class="fiu-article">
+        
+        
+            <form  method="post">
+        
+        
+            <div class="govuk-grid-column-full" style="padding: 30px 30px; border: 1px solid #cbd0d3; background-color: white; margin-bottom: 5%;">
             
-        
-            {%  if (data['roles'] == 10)%}
-            <div class="govuk-inset-text" style="font-family: nobel,sans-serif;
-            font-weight: 300;
-            font-style: normal;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;">
-              You have selected the maximum number of roles.
-              </div>
                 
-            {% else %}
-            
-            
-            
-            {% endif %}
-            
         
         
-        </caption>
-
-
-
-
-<thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Apprenticeship training course</th>
-                <th scope="col" class="govuk-table__header govuk-table__header">Roles available</th>
-                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-table__cell">{{ data['selectedcourse'] }}  </td>
-                <td class="govuk-table__cell govuk-table__cell">{{ data['roles'] }}</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric"> <a class="govuk-link--no-visited-state" href="page2filtered"><span aria-hidden="true" style="font-family: nobel,sans-serif;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale; color:#1d70b8; text-decoration: underline;
-                    text-decoration-color: #1d70b8;">Change</span><span class="govuk-visually-hidden">Change apprenticeship details</span></a><br><br>
-                     <a class="govuk-link--no-visited-state" href="page3bnonlevy"><span aria-hidden="true" style="font-family: nobel,sans-serif;
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale; color:#1d70b8;
-                        text-decoration: underline; text-decoration-color: #1d70b8;">Remove</span><span class="govuk-visually-hidden">Remove {{ data['selectedcourse'] }}  from the list</span></a></td>
-              </tr>
+               
+            
+                
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--l">
+                      Are you sure you want to remove this apprenticeship training course?
+                      </legend>
+        
+        
+                   
+        
+        
+                    
+                        <h3 class="govuk-heading-m">{{ data['selectedcourse'] }} </h3>
+    
+                        {%  if (data['selectedcourse'] == "Business administrator") %}
+            
+            
+            
+                                  <p class="govuk-body-s"> Supporting and engaging with different parts of the organisation and interact with internal or external customers.</p>
+                                  <p class="govuk-body-s govuk-!-margin-bottom-6">
+                                    Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/business-administrator-v1-0" target="_blank" rel="external">Business administrator (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                                </p>
+            
+            
+                        {%  elif (data['selectedcourse'] == "HR support") %}
+            
+            
+            
+            
+            
+                        <p class="govuk-body-s"> Handling day to day queries and providing human resources advice ranging from recruitment through to retirement.</p>
+                        <p class="govuk-body-s govuk-!-margin-bottom-6">
+                            Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/hr-support-v1-1" target="_blank" rel="external">HR support (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                      </p>
+            
+            
+                        {%  elif (data['selectedcourse'] == "Improvement technician") %}
+            
+                        <p class="govuk-body-s">Responsible for delivery and coaching of improvement activity within an area of responsibility.</p>
+                        <p class="govuk-body-s govuk-!-margin-bottom-6">
+                            Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/improvement-technician-v1-0" target="_blank" rel="external">Improvement technician (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                      </p>
+            
+                       {%  elif (data['selectedcourse'] == "Learning and development practitioner") %}
+            
+            
+                       <p class="govuk-body-s">Identifying, creating and delivering appropriate training needs.</p>
+                       <p class="govuk-body-s govuk-!-margin-bottom-6">
+                        Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/learning-and-development-practitioner-v1-0" target="_blank" rel="external">Learning and development practitioner (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                     </p>
+            
+                     {%  elif (data['selectedcourse'] == "Leisure duty manager") %}
+            
+                     <p class="govuk-body-s">Managing the day to day operation of a leisure facility.</p>
+                     <p class="govuk-body-s govuk-!-margin-bottom-6">
+                        Full information on <a class="govuk-link govuk-link--no-visited-state" href="https://www.instituteforapprenticeships.org/apprenticeship-standards/leisure-duty-manager-v1-1" target="_blank" rel="external">Leisure duty manager (level 3)</a> is available from the Institute for Apprenticeships and Technical Education.
+                   </p>
+            
+            
+                   {% endif %}
+               
+                    
+                        
+          
+                      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="remove1" name="remove" type="radio" value="Yes">
+                          <label class="govuk-label govuk-radios__label" for="remove1" style="font-family: nobel,sans-serif;
+                          font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="remove2" name="remove" type="radio" value="No">
+                          <label class="govuk-label govuk-radios__label" for="remove2" style="font-family: nobel,sans-serif;
+                          font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                
+                    </fieldset>
+                  </div>
              
-            </tbody>
-          </table>
+                                    
+                                          
+                <br>
+                <button class="fiu-button fiu-button--employers" style="margin-right:10px;">Continue</button>
 
-
-       
-    
+        </div>
+        </form> 
         
-   
-           
-
-
-           
-
-
-             
-
-
-
-  {%  if (data['roles'] == 10) or (data['roles'] > 10) %}
-
-    
-{% else %}
-<div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="anothers-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
-       Would you like to add any more apprenticeships?
-      </legend>
-<div id="anothers-hint" class="govuk-hint" style="font-family: nobel,sans-serif;
-font-weight: 300; font-style: normal; -webkit-font-smoothing: antialiased; color: #0b0c0c;">
- As a non-levy employer you can only select up to 10.
-</div>
-<div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-  <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="anothers" name="anothers" type="radio" value="Yes">
-    <label class="govuk-label govuk-radios__label" for="anothers" style="font-family: nobel,sans-serif;
-    font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
-      Yes
-    </label>
-  </div>
-  <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="anothers-2" name="anothers" type="radio" value="No">
-    <label class="govuk-label govuk-radios__label" for="anothers-2" style="font-family: nobel,sans-serif;
-    font-weight: 400; font-style: normal; -webkit-font-smoothing: antialiased;">
-      No
-    </label>
-  </div>
-</div>
-
-</fieldset>
-</div>
-{% endif %}
-
-
-
-     
-                            
-                                  
-        <br>
-        <button class="fiu-button fiu-button--employers" style="margin-right:10px;">Continue</button>
-
-</div>
-</form> 
-
-
-</article>
-
-
-
-
-
-
-    </div>
-
-
-
-
-<div class="govuk-grid-column-one-third">
-            
-      
         
+        </article>
+        
+        
+        
+        
+        
+        
+            </div>
 
 
-       
-<div class="fiu-panel fiu-panel--narrow-col" style="padding-left: 20px; padding-right:20px;  padding-bottom: 10px;">
-    <h2 class="govuk-heading-m fiu-panel__heading" style="text-align: left; margin-left:0;">Additional support</h2>
-    
-<p class="govuk-body-m" style="text-align: left;">Additional support is available to employers who wish to train young or disadvantaged people. <br>Employers and training providers could get £1,000 each for taking on an apprentice who is either:
 
-    <ul class="govuk-list govuk-list--bullet" style="text-align: left;">
-        <li>aged 16 to 18 years old,</li>
-        <li>or aged 19 to 25 years old and has an education, health and care (EHC) plan
-        </li>
-        <li>or has been in the care of their local authority</li>
-    
-    </ul>
-    </p>
-    <p class="govuk-body-m" style="text-align: left;">
-    You can recruit an apprentice while they are still at school but they will need to be 16 or over by the end of the summer holidays to start the apprenticeship.</p>
-    </div>
 
 
 </main>
