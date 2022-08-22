@@ -294,11 +294,29 @@
        
                                   
         <br>
-<div class="govuk-button-group"><a class="fiu-button fiu-button--employers" href="finalpage1b">Submit</a>
+<a class="fiu-button fiu-button--employers" href="finalpage1b">Submit</a>
+
+
+    
+
+    {%  if (data['levytype'] == "Under £3 million") %}
+            
+   
+    <br>
+    <a href="page3nonlevy" class="fiu-button fiu-button--employers fiu-button--outlined">Back</a>
+
+
+{%  else  %}
+
+<br>
+<a href="page3levy" class="fiu-button fiu-button--employers fiu-button--outlined">Back</a>
+{% endif %}
 
 
 
-</div>
+
+
+
 </div>
 </article>
 
