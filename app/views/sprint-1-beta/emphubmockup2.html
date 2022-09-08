@@ -144,20 +144,20 @@ img {
   margin: 0 auto;
   max-height: 70%;
   max-width: 70%;
-}</style>
-
-
-<style>
-   .employer-confirmed .govuk-warning-text .govuk-confirm__icon, .provider-confirmed .govuk-warning-text .govuk-confirm__icon, .ready-to-sign .govuk-warning-text .govuk-confirm__icon, .confirmed-panel .govuk-warning-text .govuk-confirm__icon {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    margin-top: -5px;
-    float: left;
-    background: url(/app/assets/images/tick-green.svg) no-repeat 50% 50%;
-    background-size: contain;
 }
+
+@media screen and (max-width: 635px) {
+  .center-fits {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+
+
 </style>
+
+
 
 
      
@@ -291,7 +291,7 @@ img {
 According to data from the National Apprenticeship Service, 92% of companies that have taken on apprentices believe this leads to a more motivated and satisfied workforce and 80% have seen a significant increase in employee retention.
 <br><br>
                            
-<a href="startpage" class="fiu-button fiu-button--employers fiu-button--outlined">Read stories from businesses like yours</a>
+<a href="https://www.apprenticeships.gov.uk/employers/real-stories-employers" target="_blank" class="fiu-button fiu-button--employers fiu-button--outlined">Read stories from businesses like yours</a>
             
         </div>
         <div class="govuk-grid-column-one-half">
@@ -423,7 +423,7 @@ According to data from the National Apprenticeship Service, 92% of companies tha
         </ul>
     </p>
                
-    <button href="emphubmockup" class="fiu-button fiu-button--employers fiu-button--outlined" style="float:left;">Start again</button><br><br><br>
+    <a class="fiu-button fiu-button--employers fiu-button--outlined" style="float:left;">Start again</a><br><br><br>
 
    
 </article>
@@ -502,10 +502,10 @@ According to data from the National Apprenticeship Service, 92% of companies tha
                 <div class="imgbox"> <img class="center-fits"  src='/public/images/chat.png'></div>
     
             </div>
-            
+            <button class="fiu-button fiu-button--employers" style="float:left;">Sign up for your employer account</button>
           </div>
          
-          <button class="fiu-button fiu-button--employers" style="text-align:left; margin-left:0; float:left;">Sign up for your employer account</button>
+         
     
 
     
