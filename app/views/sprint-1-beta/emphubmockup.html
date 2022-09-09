@@ -122,7 +122,16 @@
         
 
 <style>
-        .center-fits {
+        .center-fits1 {
+     padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+    }
+
+
+    .center-fits {
      padding: 0;
   display: block;
   margin: 0 auto;
@@ -156,6 +165,19 @@ img {
 }
 @media screen and (max-width: 641px) {
   .center-fits {
+    visibility: hidden;
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .center-fits1 {
+    max-height: 70%;
+  max-width: 70%;
+}
+
+}
+@media screen and (max-width: 641px) {
+  .center-fits1 {
     visibility: hidden;
     display: none;
   }
@@ -259,7 +281,7 @@ img {
 </div>
 <div class="govuk-grid-column-one-half">
 
-    <div class="imgbox"> <img class="center-fits"  src='/public/images/futureproof.jpg'></div>
+    <div class="imgbox"> <img class="center-fits1"  src='/public/images/image1.jpg'></div>
     </div>
 
     </div>
@@ -335,11 +357,11 @@ img {
 </ul>
 <br><br>
                            
-<a href="https://www.apprenticeships.gov.uk/employers/real-stories-employers" target="_blank" class="fiu-button fiu-button--employers fiu-button--outlined" style="float:left;">Read stories from businesses like yours</a>
+<a href="https://www.apprenticeships.gov.uk/employers/real-stories-employers" target="_blank" class="fiu-button fiu-button--employers fiu-button--outlined" style="float:left;">See stories from businesses like yours</a>
             
         </div>
         <div class="govuk-grid-column-one-half">
-            <div class="imgbox"> <img class="center-fits"  src='/public/images/futureproof2.jpg'></div>
+            <div class="imgbox"> <img class="center-fits1"  src='/public/images/image2.jpg'></div>
 
         </div>
         
@@ -419,7 +441,7 @@ img {
         </div>
         <div class="govuk-grid-column-one-half">
 
-    <div class="imgbox"> <img class="center-fits"  src='/public/images/futureproof3.jpg'></div>
+    <div class="imgbox"> <img class="center-fits1"  src='/public/images/image5.jpg'></div>
             <!--
             <div class="imgbox"> <img class="center-fits"  src='/public/images/calculator.png'></div>
 -->
