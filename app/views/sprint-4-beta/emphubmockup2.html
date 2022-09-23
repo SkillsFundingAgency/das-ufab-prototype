@@ -142,8 +142,8 @@ max-width: 45%;
  padding: 0;
 display: block;
 margin: 0 auto;
-max-height: 100%;
-max-width: 100%;
+max-height: 80%;
+max-width: 80%;
 }
 
 
@@ -154,7 +154,19 @@ margin: 0 auto;
 max-height: 70%;
 max-width: 70%;
 }
+@media screen and (max-width: 900px) {
+.center-fit {
+max-height: 70%;
+max-width: 70%;
+}
 
+}
+@media screen and (max-width: 641px) {
+.center-fit {
+visibility: hidden;
+display: none;
+}
+}
 
 @media screen and (max-width: 900px) {
 .center-fits {
@@ -187,7 +199,6 @@ display: none;
 
 
 </style>
-
 
 
 <style>
@@ -355,9 +366,9 @@ margin-bottom:0;
                 text-decoration: underline;
                 text-decoration-thickness: max(1px, 0.0625rem);
                 text-underline-offset: 0.1em;">
-                      <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other"  href="#">Get going</a></li>
-                      <li class="gem-c-related-navigation__link" style="margin-top:15px;"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="#">Future-proof your business</a></li>
-                      <li class="gem-c-related-navigation__link"  style="margin-top:15px;"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="#">Find out what funding you could have available</a></li>
+                      <li class="gem-c-related-navigation__link"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other"  href="#get">Get going</a></li>
+                      <li class="gem-c-related-navigation__link" style="margin-top:15px;"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="#future">Future-proof your business</a></li>
+                      <li class="gem-c-related-navigation__link"  style="margin-top:15px;"><a class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--sidebar  govuk-link gem-c-related-navigation__section-link--other" href="#calculation">Find out what funding you could have available</a></li>
               
                 </ul>
               </nav>
@@ -372,7 +383,7 @@ margin-bottom:0;
            
     <div class="fiu-panel fiu-panel--fat ">
    
-    <h2 class="govuk-heading-l fiu-panel__heading" style="text-align: left; white-space: nowrap; margin-left:0;">Are you ready to get going?</h2>
+    <h2 class="govuk-heading-l fiu-panel__heading" id="get" style="text-align: left; white-space: nowrap; margin-left:0;">Are you ready to get going?</h2>
 
     <p class="fiu-card__content" style="text-align: left;">
         Apprenticeships are suitable for people at any level so you can hire someone new or upskill an existing employee, allowing you to grow talent and develop a motivated, skilled and qualified workforce. They help you to:
@@ -445,7 +456,7 @@ margin-bottom:0;
 <article class="fiu-article">
 
    
-    <h2 class="govuk-heading-l fiu-panel__heading" style="text-align: left; margin-left:0;">Future-proof your business</h2><br>
+    <h2 class="govuk-heading-l fiu-panel__heading" id="future" style="text-align: left; margin-left:0;">Future-proof your business</h2><br>
 
 
 
@@ -616,27 +627,60 @@ margin-bottom:0;
         text-underline-offset: 0.1em;" href="#">Print or save page</a></p>
 
 <br><hr>
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
    
         <div class="govuk-inset-text" style="text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;">
-        <p class="fiu-card__content">“Our apprenticeship scheme has brought new innovation and ideas, with a more bottom-up operational team rather than manager-led, but also reduced mistakes and customer complaints because they are extremely capable.” </p>
-        <strong style="font-weight:400;">Employer</strong>,
-        Organisation
-        </div></div>
-    <div class="govuk-grid-column-one-third"><br><br><br>
-    <div class="imgbox"> <img class="" src='/public/images/happyemployer.jpg'></div>
+        <p class="fiu-card__content">“Have a plan of what it is that you would like for your student to learn while they are with you, speak to them about what their goals are. Be ready to offer extra time and support to make sure that you get the best out of them.”</p>
+        <strong style="font-weight:400;">Star Pharmacy</strong>,
+        Yorkshire
+        </div>
+            </div>
+    <div class="govuk-grid-column-one-third" style="margin-top: 8%;">
+    <div class="imgbox"> <img class="center-fit" src='/public/images/image1.jpg'></div>
 </div>
 
-   
     </div>
+    
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+       
+            <div class="govuk-inset-text" style="text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;">
+            <p class="fiu-card__content">“The apprentices’ technical education has enabled them to perform in an innovative way for a business that is at the centre of a thriving e-commerce sector and benefiting greatly. As a company that specialises in outdoor leisure products, OLPRO’s able to use its technical education to introduce unique ideas that stand out from competitors.”</p>
+            <strong style="font-weight:400;">HR Manager</strong>,
+                OLPRO
+            </div>
+                </div>
+        <div class="govuk-grid-column-one-third"  style="margin-top: 8%;">
+        <div class="imgbox"> <img class="center-fit" src='/public/images/image2.jpg'></div>
+    </div>
+    
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+           
+                <div class="govuk-inset-text" style="text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;">
+                <p class="fiu-card__content">“Apprentices are a good way of flexibly expanding capability, trialling new early career employees. They also help enforce the skills of existing staff that are training them.” </p>
+                <strong style="font-weight:400;">Online Lubricants Ltd</strong>,
+                Essex
+                </div>
+                    </div>
+            <div class="govuk-grid-column-one-third"  style="margin-top: 8%;">
+            <div class="imgbox"> <img class="center-fit" src='/public/images/image5.jpg'></div>
+        </div>
+        
+            </div>
 
 
-
-
+            <br>
+            <a href="https://www.apprenticeships.gov.uk/employers/real-stories-employers" target="_blank" class="fiu-button fiu-button--employers fiu-button--outlined" style="float:left;">See more stories from businesses like yours</a>
 
 
 
@@ -771,27 +815,58 @@ margin-bottom:0;
 
 <br><hr>
 <div class="govuk-grid-row">
-
     <div class="govuk-grid-column-two-thirds">
    
-        <div class="govuk-inset-text" style=" text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
+        <div class="govuk-inset-text" style="text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;">
-        <p class="fiu-card__content">“Our apprenticeship scheme has brought new innovation and ideas, with a more bottom-up operational team rather than manager-led, but also reduced mistakes and customer complaints because they are extremely capable.” </p>
-        <strong style="font-weight:400;">Employer</strong>,
-        Organisation
+        <p class="fiu-card__content">“Have a plan of what it is that you would like for your student to learn while they are with you, speak to them about what their goals are. Be ready to offer extra time and support to make sure that you get the best out of them.”</p>
+        <strong style="font-weight:400;">Star Pharmacy</strong>,
+        Yorkshire
         </div>
             </div>
-    <div class="govuk-grid-column-one-third"><br><br><br>
-    <div class="imgbox"> <img class="" src='/public/images/happyemployer.jpg'></div>
+    <div class="govuk-grid-column-one-third" style="margin-top: 8%;">
+    <div class="imgbox"> <img class="center-fit" src='/public/images/image1.jpg'></div>
 </div>
 
     </div>
+    
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+       
+            <div class="govuk-inset-text" style="text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;">
+            <p class="fiu-card__content">“The apprentices’ technical education has enabled them to perform in an innovative way for a business that is at the centre of a thriving e-commerce sector and benefiting greatly. As a company that specialises in outdoor leisure products, OLPRO’s able to use its technical education to introduce unique ideas that stand out from competitors.”</p>
+            <strong style="font-weight:400;">HR Manager</strong>,
+                OLPRO
+            </div>
+                </div>
+        <div class="govuk-grid-column-one-third"  style="margin-top: 8%;">
+        <div class="imgbox"> <img class="center-fit" src='/public/images/image2.jpg'></div>
+    </div>
+    
+        </div>
 
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+           
+                <div class="govuk-inset-text" style="text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;">
+                <p class="fiu-card__content">“Apprentices are a good way of flexibly expanding capability, trialling new early career employees. They also help enforce the skills of existing staff that are training them.” </p>
+                <strong style="font-weight:400;">Online Lubricants Ltd</strong>,
+                Essex
+                </div>
+                    </div>
+            <div class="govuk-grid-column-one-third"  style="margin-top: 8%;">
+            <div class="imgbox"> <img class="center-fit" src='/public/images/image5.jpg'></div>
+        </div>
+        
+            </div>
 
-
-
-
+            <br>
+            <a href="https://www.apprenticeships.gov.uk/employers/real-stories-employers" target="_blank" class="fiu-button fiu-button--employers fiu-button--outlined" style="float:left;">See more stories from businesses like yours</a>
     </article>
 
 
@@ -901,24 +976,58 @@ margin-bottom:0;
 
 <hr>
 
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
    
         <div class="govuk-inset-text" style="text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;">
-        <p class="fiu-card__content">“Our apprenticeship scheme has brought new innovation and ideas, with a more bottom-up operational team rather than manager-led, but also reduced mistakes and customer complaints because they are extremely capable.” </p>
-        <strong style="font-weight:400;">Employer</strong>,
-        Organisation
+        <p class="fiu-card__content">“Have a plan of what it is that you would like for your student to learn while they are with you, speak to them about what their goals are. Be ready to offer extra time and support to make sure that you get the best out of them.”</p>
+        <strong style="font-weight:400;">Star Pharmacy</strong>,
+        Yorkshire
         </div>
             </div>
-    <div class="govuk-grid-column-one-third"><br><br><br>
-    <div class="imgbox"> <img class="" src='/public/images/happyemployer.jpg'></div>
+    <div class="govuk-grid-column-one-third" style="margin-top: 8%;">
+    <div class="imgbox"> <img class="center-fit" src='/public/images/image1.jpg'></div>
 </div>
 
     </div>
+    
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+       
+            <div class="govuk-inset-text" style="text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;">
+            <p class="fiu-card__content">“The apprentices’ technical education has enabled them to perform in an innovative way for a business that is at the centre of a thriving e-commerce sector and benefiting greatly. As a company that specialises in outdoor leisure products, OLPRO’s able to use its technical education to introduce unique ideas that stand out from competitors.”</p>
+            <strong style="font-weight:400;">HR Manager</strong>,
+                OLPRO
+            </div>
+                </div>
+        <div class="govuk-grid-column-one-third"  style="margin-top: 8%;">
+        <div class="imgbox"> <img class="center-fit" src='/public/images/image2.jpg'></div>
+    </div>
+    
+        </div>
 
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+           
+                <div class="govuk-inset-text" style="text-align: left; border-left: 5px solid #cbd0d3; font-size: 16px; font-weight:300;font-family: nobel, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;">
+                <p class="fiu-card__content">“Apprentices are a good way of flexibly expanding capability, trialling new early career employees. They also help enforce the skills of existing staff that are training them.” </p>
+                <strong style="font-weight:400;">Online Lubricants Ltd</strong>,
+                Essex
+                </div>
+                    </div>
+            <div class="govuk-grid-column-one-third"  style="margin-top: 8%;">
+            <div class="imgbox"> <img class="center-fit" src='/public/images/image5.jpg'></div>
+        </div>
+        
+            </div>
+            <br>
+            <a href="https://www.apprenticeships.gov.uk/employers/real-stories-employers" target="_blank" class="fiu-button fiu-button--employers fiu-button--outlined" style="float:left;">See more stories from businesses like yours</a>
 </article>
 
 
